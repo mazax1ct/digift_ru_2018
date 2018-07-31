@@ -1,0 +1,58 @@
+.header
+  left: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 1
+
+  &__inner
+    align-items: center
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    max-width: 1440px
+    padding-top: 25px
+    padding-left: 25px
+    padding-right: 25px
+
+    @media(min-width: 1200px)
+      padding-left: 45px
+      padding-right: 45px
+
+.logo
+  display: inline-block
+  height: 51px
+  margin-right: 36px
+  width: 103px
+
+  @media(min-width: 1200px)
+    margin-right: 54px
+
+  @media(min-width: 1440px)
+    margin-right: 72px
+
+
+.main-menu
+  display: flex
+
+  &__link
+    color: #262626
+    margin-right: 36px
+    padding-top: 4px
+    padding-bottom: 3px
+    text-decoration: none
+
+    @media(min-width: 1200px)
+      margin-right: 54px
+
+    @media(min-width: 1440px)
+      margin-right: 72px
+
+.buy-link
+  background: url('../images/icons/cards.png') no-repeat 100% 50% transparent
+  color: #262626
+  margin-left: auto
+  padding-top: 4px
+  padding-bottom: 3px
+  padding-right: 58px
+  text-decoration: none

@@ -1,0 +1,110 @@
+.input,
+.textarea
+  background-color: #3c3c3c
+  border: 1px solid #707070
+  border-radius: 0
+  box-shadow: none
+  color: #fff
+  display: block
+  font-family: 'Roboto', 'Arial', sans-serif
+  font-weight: 400
+  transition: border-color 0.3s, color 0.3s
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: 100%
+
+  &:focus
+    border-color: #fff
+
+  &.error
+    border-color: #e5262d
+    color: #fff
+
+    &:focus
+      border-color: #e5262d
+      color: #fff
+
+input,
+textarea
+  &:focus
+    outline: 0
+
+.input
+  height: 40px
+  line-height: 40px
+  padding: 0 10px
+
+.textarea
+  height: 185px
+  padding: 10px
+  resize: none
+
+/*placeholder*/
+.input::-webkit-input-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+.input::-moz-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+.input:-ms-input-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea::-webkit-input-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea::-moz-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea:-ms-input-placeholder
+  color: #9e9e9e
+  opacity: 1
+  transition: opacity 0.3s
+
+//error
+.input.error::-webkit-input-placeholder
+  color: #fff
+
+.input.error::-moz-placeholder
+  color: #fff
+
+.input.error:-ms-input-placeholder
+  color: #fff
+
+.textarea.error::-webkit-input-placeholder
+  color: #fff
+
+.textarea.error::-moz-placeholder
+  color: #fff
+
+.textarea.error:-ms-input-placeholder
+  color: #fff
+
+/*:focus placeholder*/
+.input:focus::-webkit-input-placeholder
+  opacity: 0
+
+.input:focus::-moz-placeholder
+  opacity: 0
+
+.input:focus:-ms-input-placeholder
+  opacity: 0
+
+.textarea:focus::-webkit-input-placeholder
+  opacity: 0
+
+.textarea:focus::-moz-placeholder
+  opacity: 0
+
+.textarea:focus:-ms-input-placeholder
+  opacity: 0

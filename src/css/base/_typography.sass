@@ -1,0 +1,137 @@
+html
+  font-size: 16px
+
+  @media(min-width: 1440px)
+    font-size: 18px
+
+body
+  color: #fff
+  color: #3e4846
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+  line-height: 1.666
+  letter-spacing: 0.5px
+
+*
+  outline: none
+
+a
+  color: #3e4846
+  transition: color 0.3s
+
+h1,.h1,
+h2,.h2,
+h3,.h3
+  color: #1e1e1e
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+  margin-top: 0
+  margin-bottom: 25px
+
+h1,.h1,
+h2,.h2
+  font-size: 34px
+  line-height: 40px
+
+  @media(min-width: 1440px)
+    font-size: 43px
+    line-height: 50px
+
+h3,.h3
+  font-size: 32px
+  line-height: 44px
+
+p,
+ol,
+ul
+  margin-top: 0
+  margin-bottom: 25px
+
+  &:last-child
+    margin-bottom: 0
+
+ul,
+ol
+  list-style: none
+  padding-left: 0
+
+.page-content
+  ul,
+  ol
+    li
+      margin-bottom: 15px
+
+      &:last-child
+        margin-bottom: 0
+
+  ul
+    list-style: disc
+    list-style-position: inside
+
+  ol
+    list-style: decimal
+    list-style-position: inside
+
+  p,
+  ol,
+  ul,
+  .table-responsive,
+  .table
+    margin-bottom: 15px
+
+    @media(min-width: 1200px)
+      margin-bottom: 25px
+
+    @media(min-width: 1900px)
+      margin-bottom: 25px
+
+  .table-responsive
+    .table
+      margin-bottom: 0
+
+  .table
+    border-collapse: collapse
+    border: 1px solid #4a4a4a
+    max-width: 100%
+    text-align: left
+    width: 100%
+
+    th,
+    td
+      border: 1px solid #4a4a4a
+      padding: 10px
+      vertical-align: middle
+
+      @media(min-width: 1500px)
+        padding: 15px
+
+    tbody
+      tr:nth-child(odd)
+	      background-color: #272727
+
+      tr:nth-child(even)
+        background-color: #323232
+
+.table-responsive
+  min-height: .01%
+  overflow-x: auto
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top
+
+.video
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+  margin-top: 25px
+  margin-bottom: 25px
+
+.video iframe
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%

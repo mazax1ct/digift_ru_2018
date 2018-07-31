@@ -1,0 +1,94 @@
+.links
+  align-items: flex-end
+  bottom: 0
+  display: flex
+  min-height: 40%
+  left: 0
+  padding-left: 40px
+  position: absolute
+  top: auto
+  width: 100%
+
+  @media(min-width: 1200px)
+    padding-left: 90px
+
+.link
+  color: #fff
+  display: flex
+  flex-flow: column
+  justify-content: flex-end
+  height: 60%
+  line-height: 1.4
+  min-height: 140px
+  padding: 38px 48px
+  text-decoration: none
+  transition: height 0.3s
+  width: 33.33%
+
+  @media(min-height: 700px)
+    min-height: 225px
+
+  @media(min-width: 1440px)
+    line-height: 1.666
+
+  &--dark_text
+    color: #002c29
+
+  &--green_bg
+    background-color: #00e0b4
+
+  &--blue_bg
+    background-color: #120e62
+
+  &--light_blue_bg
+    background-color: #4740e3
+
+  &:hover
+    height: 100%
+
+    .link__text-block
+      max-height: 220px
+      opacity: 1
+      padding-top: 17px
+      visibility: visible
+
+      @media(min-height: 700px)
+        padding-top: 35px
+
+  &__title-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+  &__title
+    font-size: 18px
+    font-weight: 400
+
+  &__icon
+
+  &__text-block
+    max-height: 0
+    opacity: 0
+    overflow: hidden
+    padding-top: 0
+    transition: all 0.3s
+    visibility: hidden
+
+  &__text
+    display: block
+    font-weight: 300
+    padding-bottom: 20px
+
+    @media(min-height: 700px)
+      padding-bottom: 35px
+
+  &__more
+    background: url('../images/icons/more.png') no-repeat 0 50% transparent
+    font-size: 18px
+    font-weight: 400
+    padding-left: 55px
+    padding-top: 6px
+    padding-bottom: 6px
+
+    &--white
+      background-image: url('../images/icons/more_white.png')
