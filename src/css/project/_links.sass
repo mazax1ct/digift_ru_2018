@@ -4,12 +4,12 @@
   display: flex
   min-height: 40%
   left: 0
-  padding-left: 40px
+  padding-left: 45px
   position: absolute
   top: auto
   width: 100%
 
-  @media(min-width: 1200px)
+  @media(min-width: 1440px)
     padding-left: 90px
 
 .link
@@ -20,16 +20,20 @@
   height: 60%
   line-height: 1.4
   min-height: 140px
-  padding: 38px 48px
+  padding: 26px 32px
   text-decoration: none
   transition: height 0.3s
   width: 33.33%
 
   @media(min-height: 700px)
+    min-height: 180px
+
+  @media(min-height: 900px)
     min-height: 225px
 
   @media(min-width: 1440px)
     line-height: 1.666
+    padding: 38px 48px
 
   &--dark_text
     color: #002c29
@@ -52,7 +56,7 @@
       padding-top: 17px
       visibility: visible
 
-      @media(min-height: 700px)
+      @media(min-height: 900px)
         padding-top: 35px
 
   &__title-block
@@ -62,7 +66,6 @@
 
   &__title
     font-size: 18px
-    font-weight: 400
 
   &__icon
 
@@ -79,16 +82,5 @@
     font-weight: 300
     padding-bottom: 20px
 
-    @media(min-height: 700px)
+    @media(min-height: 900px)
       padding-bottom: 35px
-
-  &__more
-    background: url('../images/icons/more.png') no-repeat 0 50% transparent
-    font-size: 18px
-    font-weight: 400
-    padding-left: 55px
-    padding-top: 6px
-    padding-bottom: 6px
-
-    &--white
-      background-image: url('../images/icons/more_white.png')

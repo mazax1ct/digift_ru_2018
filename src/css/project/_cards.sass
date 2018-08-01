@@ -1,3 +1,23 @@
+.cards-slider
+  height: 100%
+  width: 100%
+
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  &__slide
+    display: flex
+    flex-flow: column
+    justify-content: flex-end
+
+.slick-initialized
+  .cards-slider__slide
+    display: flex
+
+.dots-container
+  position: relative
+
 .cards
   display: flex
   flex-wrap: wrap
@@ -6,11 +26,18 @@
   width: 100%
 
 .card
+  font-size: 14px
   height: 50%
   max-height: 360px
   overflow: hidden
   position: relative
   width: 33.333%
+
+  @media(min-width: 1366px)
+    font-size: 16px
+
+  @media(min-width: 1440px)
+    font-size: 18px
 
   &:hover
     .card__front
@@ -58,6 +85,7 @@
 
   &__back
     background-color: #fff
+    padding: 13.888% 16.666%
     transform: perspective(10000px) rotateY(180deg)
 
     &--align_center
@@ -93,3 +121,4 @@
     &--background_image
       background-position: 50% 50%
       background-repeat: no-repeat
+      background-size: cover
