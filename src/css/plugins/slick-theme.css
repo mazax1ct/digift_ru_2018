@@ -9,10 +9,8 @@
   display: block;
   width: 48px;
   height: 48px;
-  opacity: 1;
   padding: 0;
   transform: translate(0, -50%);
-  transition: opacity 0.3s;
   cursor: pointer;
   border: none;
   outline: none;
@@ -31,9 +29,7 @@
 
 .slick-prev.slick-disabled,
 .slick-next.slick-disabled {
-  cursor: default;
-  opacity: 0;
-  z-index: -1;
+  display: none !important;
 }
 
 .slick-prev {
@@ -45,14 +41,6 @@
 }
 
 .slick-dots {
-  /*position: absolute;
-  bottom: -25px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;*/
   bottom: 55px;
   display: flex;
   flex-wrap: wrap;
@@ -69,30 +57,12 @@
 }
 
 .slick-dots li {
-  /*position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;*/
   height: 6px;
   margin-right: 16px;
   width: 6px;
 }
 
 .slick-dots li button {
-  /*font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;*/
   background-color: #d1d4da;
   border: none;
   border-radius: 50%;

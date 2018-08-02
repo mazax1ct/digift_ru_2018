@@ -1,0 +1,23 @@
+.cards-slider
+  height: 100%
+  width: 100%
+
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  &__slide
+    display: flex
+    flex-flow: column
+    justify-content: flex-end
+
+.slick-initialized
+  .cards-slider__slide
+    display: flex
+
+.dots-container
+  position: relative
+
+.no_pointer_events
+  .card
+    pointer-events: none

@@ -17,7 +17,6 @@ body
 
 a
   color: #3e4846
-  transition: color 0.3s
 
 h1,.h1,
 h2,.h2,
@@ -40,6 +39,17 @@ h2,.h2
 h3,.h3
   font-size: 32px
   line-height: 44px
+
+.section--text_white
+  color: #fff
+
+  h1,.h1,
+  h2,.h2,
+  h3,.h3
+    color: #fff
+
+  .more-link
+    color: #fff
 
 p,
 ol,
@@ -142,18 +152,18 @@ img
   background-repeat: no-repeat
   background-color: transparent
   display: inline-block
+  line-height: 37px
   min-height: 37px
   padding-left: 55px
-  padding-top: 2px
   text-decoration: none
 
-  &--color_white
+  &--text_white
     color: #fff
 
-  &--white
+  &--icon_white
     background-image: url('../images/icons/more_white.jpg')
 
-  &--colored
+  &--icon_colored
     background-image: url('../images/icons/more_colored.jpg')
 
 a.more-link

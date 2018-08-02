@@ -1,23 +1,3 @@
-.cards-slider
-  height: 100%
-  width: 100%
-
-  .slick-list,
-  .slick-track
-    height: 100%
-
-  &__slide
-    display: flex
-    flex-flow: column
-    justify-content: flex-end
-
-.slick-initialized
-  .cards-slider__slide
-    display: flex
-
-.dots-container
-  position: relative
-
 .cards
   display: flex
   flex-wrap: wrap
@@ -39,6 +19,9 @@
   @media(min-width: 1440px)
     font-size: 18px
 
+  &--text_white
+    color: #fff
+
   &:hover
     .card__front
       transform: perspective(10000px) rotateY(-179.9deg)
@@ -57,11 +40,15 @@
     width: 100%
 
   &__front
+    color: #1e1e1e
     padding: 48px
     transform: perspective(10000px) rotateY(0deg)
 
-    &--grey_bg
-      background-color: #f6f6f6
+    &--text_white
+      color: #fff
+
+    &--light_bg
+      background-color: rgba(255,255,255,0.3)
 
     &--green_bg
       background-color: #00e0b4
@@ -79,6 +66,7 @@
       justify-content: center
 
     &--align_end
+      align-items: flex-start
       display: flex
       flex-flow: column
       justify-content: flex-end
@@ -122,3 +110,17 @@
       background-position: 50% 50%
       background-repeat: no-repeat
       background-size: cover
+
+  &__icon
+    background-color: #1e1e1e
+    border-radius: 4px
+    display: block
+    height: 48px
+    margin-bottom: 24px
+    width: 48px
+
+    &--green
+      background-color: #00e0b4
+
+    &--white
+      background-color: #fff
