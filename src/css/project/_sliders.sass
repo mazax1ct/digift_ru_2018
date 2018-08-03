@@ -1,3 +1,6 @@
+.dots-container
+  position: relative
+
 .cards-slider
   height: 100%
   width: 100%
@@ -11,13 +14,44 @@
     flex-flow: column
     justify-content: flex-end
 
-.slick-initialized
-  .cards-slider__slide
-    display: flex
-
-.dots-container
-  position: relative
+  &.slick-initialized
+    .cards-slider__slide
+      display: flex
 
 .no_pointer_events
-  .card
+  .card,
+  .article
     pointer-events: none
+
+.articles-slider
+  height: 56.22%
+  max-height: 506px
+  max-width: 1152px
+  margin-right: -22.05%
+  white-space: nowrap
+
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  .slick-next,
+  .slick-prev
+    top: 50%
+
+  .slick-next
+    right: calc(20.5% + 24px)
+
+    @media(min-width: 1440px)
+      right: calc(20% + 14px)
+
+    @media(min-width: 1920px)
+      right: 65px
+
+  &__slide
+    display: inline-block
+    vertical-align: top
+    white-space: normal
+
+    .article
+      height: 100%
+      margin-right: 24px

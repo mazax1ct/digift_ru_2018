@@ -12,6 +12,8 @@
 
   @media(min-width: 1440px)
     font-size: 18px
+
+  @media(min-height: 900px)
     min-height: 506px
 
   &:hover
@@ -20,11 +22,17 @@
 
   &__image
     align-items: center
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
     display: flex
     justify-content: center
     min-height: 150px
 
-    @media(min-width: 1440px)
+    @media(min-height: 700px)
+      min-height: 180px
+
+    @media(min-height: 900px)
       min-height: 225px
 
   &__text
@@ -33,10 +41,10 @@
     flex-flow: column
     flex-grow: 1
     justify-content: flex-start
-    padding: 18px
+    padding: 8%
 
-    @media(min-width: 1440px)
-      padding: 36px
+    @media(min-width: 1366px)
+      padding: 10%
 
   &__tag
     color: #9a9a9a
