@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
   }
 
-  //убираем открытие карточек при перелистывании
+  //убираем эвенты при перелистывании
   $('.js-cards-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $(this).addClass('no_pointer_events');
   });
@@ -50,13 +50,31 @@ $(document).ready(function() {
     });
   }
 
-  //убираем открытие карточек при перелистывании
+  //убираем эвенты при перелистывании
   $('.js-articles-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $(this).addClass('no_pointer_events');
   });
 
   $('.js-articles-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     $(this).removeClass('no_pointer_events');
+  });
+
+  //форма
+  $('.js-input').each(function( index ) {
+
+    if ($(this).val() != 0) {
+      $(this).addClass("changed");
+    } else {
+      $(this).removeClass("changed");
+    }
+
+    $(this).blur(function() {
+      if ($(this).val() != 0) {
+        $(this).addClass("changed");
+      } else {
+        $(this).removeClass("changed");
+      }
+    });
   });
 
 });

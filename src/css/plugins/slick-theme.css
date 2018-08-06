@@ -63,7 +63,7 @@
 }
 
 .slick-dots li button {
-  background-color: #d1d4da;
+  background-color: #1e1e1e;
   border: none;
   border-radius: 50%;
   color: transparent;
@@ -71,6 +71,7 @@
   font-size: 0;
   height: 6px;
   line-height: 0;
+  opacity: 0.2;
   padding: 0;
   vertical-align: top;
   width: 6px;
@@ -82,5 +83,9 @@
 }
 
 .slick-dots li.slick-active button {
-  background-color: #1e1e1e;
+  opacity: 1;
+}
+
+.dots-white .slick-dots li button {
+  background-color: #fff;
 }

@@ -1,2 +1,75 @@
 .footer
-  
+  background-color: #fff
+  padding-left: 45px
+  padding-right: 45px
+  padding-top: 50px
+  padding: 50px 45px
+
+  @media(min-width: 1440px)
+    padding: 105px 90px
+
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 45px
+
+    @media(min-width: 1440px)
+      margin-bottom: 90px
+
+  &__bottom
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+  &__logo
+    display: inline-block
+    width: 120px
+
+  &__copyright
+    color: #818181
+    font-size: 16px
+    margin-bottom: 0
+
+  &__links
+    display: flex
+
+  &__link
+    display: inline-block
+    height: 20px
+    margin-right: 34px
+    width: 20px
+
+    &:last-child
+      margin-right: 0
+
+.footer-menu
+  margin-bottom: 0
+
+  @media(min-width: 1440px)
+    font-size: 16px
+
+  &__title
+    color: #aaa
+    font-size: 12px
+    font-weight: 400
+    letter-spacing: 1px
+    margin-bottom: 15px
+
+  &__item
+    margin-bottom: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__link
+    color: #1e1e1e
+    display: inline-block
+    padding-top: 5px
+    padding-bottom: 5px
+    text-decoration: none
+
+    &--phone
+      font-size: 20px
+
+    &:hover
+      text-decoration: underline
