@@ -77,4 +77,17 @@ $(document).ready(function() {
     });
   });
 
+  //новость
+  $('.js-article').click(function() {
+    $('body').addClass('overflow-hidden');
+    $('.article-detail').addClass('is-open');
+    return false;
+  });
+
+  $('.js-article-close').click(function() {
+    $('.article-detail').removeClass('is-open');
+    $('body').removeClass('overflow-hidden');
+    return false;
+  });
+
 });

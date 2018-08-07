@@ -1,0 +1,104 @@
+.contacts-map
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+.contacts
+  background-color: #fff
+  bottom: 0
+  display: flex
+  height: 80%
+  left: auto
+  position: absolute
+  right: 0
+  top: auto
+  width: 50%
+  z-index: 1
+
+  &__left-block
+    display: flex
+    flex-flow: column
+    width: 41.667%
+
+  &__right-block
+    align-items: center
+    display: flex
+    flex-flow: column
+    justify-content: center
+    width: 58.333%
+
+    .contacts__icon
+      background-color: #d8d8d8
+      left: auto
+      position: absolute
+      right: 24px
+      top: 24px
+
+      @media(min-width: 1440px)
+        right: 48px
+        top: 48px
+
+  &__phone
+    background-color: #00e0b4
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    height: 50%
+    padding: 24px
+
+    @media(min-width: 1440px)
+      padding: 48px
+
+    .contacts__icon
+      background-color: #00635b
+      margin-left: auto
+
+  &__address
+    background-color: #4740e3
+    color: #fff
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    height: 50%
+    padding: 24px
+
+    @media(min-width: 1440px)
+      padding: 48px
+
+    .contacts__label
+      color: #fff
+
+    .contacts__icon
+      background-color: #fff
+      margin-left: auto
+
+  &__icon
+    border-radius: 4px
+    display: block
+    height: 48px
+    width: 48px
+
+  &__label
+    color: #838383
+    margin-bottom: 0
+
+    @media(min-width: 1440px)
+      font-size: 16px
+
+  &__text
+    font-weight: 400
+
+    @media(min-height: 700px)
+      margin-bottom: 60px
+
+    &:last-child
+      margin-bottom: 0
+
+  a
+    color: #1e1e1e
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
