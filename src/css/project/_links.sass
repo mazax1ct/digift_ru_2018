@@ -2,15 +2,12 @@
   align-items: flex-end
   bottom: 0
   display: flex
-  min-height: 40%
+  min-height: 224px
   left: 0
-  padding-left: 45px
+  padding-left: 6.25%
   position: absolute
   top: auto
   width: 100%
-
-  @media(min-width: 1440px)
-    padding-left: 90px
 
 .link
   color: #fff
@@ -18,22 +15,11 @@
   flex-flow: column
   justify-content: flex-end
   height: 60%
-  line-height: 1.4
-  min-height: 140px
-  padding: 26px 32px
+  min-height: 224px
+  padding: 43px 48px
   text-decoration: none
-  transition: height 0.3s
+  transition: height 0.5s
   width: 33.33%
-
-  @media(min-height: 700px)
-    min-height: 180px
-
-  @media(min-height: 900px)
-    min-height: 225px
-
-  @media(min-width: 1440px)
-    line-height: 1.666
-    padding: 38px 48px
 
   &--dark_text
     color: #002c29
@@ -51,31 +37,31 @@
     height: 100%
 
     .link__text-block
-      max-height: 220px
+      max-height: 280px
       opacity: 1
-      padding-top: 17px
+      padding-top: 27px
       visibility: visible
 
-      @media(min-height: 900px)
-        padding-top: 35px
-
   &__title-block
-    align-items: center
-    display: flex
-    justify-content: space-between
+    @media(min-width: 1440px)
+      align-items: center
+      display: flex
+      justify-content: space-between
 
   &__title
-    font-size: 18px
-
-    @media(min-width: 1440px)
-      font-size: 20px
+    font-size: 20px
 
   &__icon
     background-color: #1e1e1e
     border-radius: 4px
     display: block
     height: 48px
+    margin-bottom: 26px
     width: 48px
+
+    @media(min-width: 1440px)
+      margin-bottom: 0
+      order: 2
 
     &--white
       background-color: #fff
@@ -85,13 +71,10 @@
     opacity: 0
     overflow: hidden
     padding-top: 0
-    transition: all 0.3s
+    transition: max-height 0.3s, opacity 0.3s, padding-top 0.3s, visibility 0.3s
     visibility: hidden
 
   &__text
     display: block
-    font-weight: 300
-    padding-bottom: 20px
-
-    @media(min-height: 900px)
-      padding-bottom: 35px
+    opacity: 0.8
+    padding-bottom: 30px

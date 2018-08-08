@@ -6,18 +6,12 @@
   width: 100%
 
 .card
-  font-size: 14px
   height: 50%
   max-height: 360px
+  max-width: 300px
   overflow: hidden
   position: relative
   width: 33.333%
-
-  @media(min-width: 1366px)
-    font-size: 16px
-
-  @media(min-width: 1440px)
-    font-size: 18px
 
   &--text_white
     color: #fff
@@ -48,7 +42,7 @@
       color: #fff
 
     &--light_bg
-      background-color: rgba(255,255,255,0.3)
+      background-color: rgba(255,255,255,0.4)
 
     &--green_bg
       background-color: #00e0b4
@@ -82,7 +76,7 @@
       flex-flow: column
       justify-content: center
 
-    &--decorated
+    //&--decorated
       &::before
         border-width: 12px
         border-style: solid
@@ -94,13 +88,13 @@
         top: 0
         width: 0
 
-    &--decorated_red
+    //&--decorated_red
       &::before
         border-color: #ff1e39
         border-bottom-color: transparent
         border-left-color: transparent
 
-    &--decorated_green
+    //&--decorated_green
       &::before
         border-color: #00e0b4
         border-bottom-color: transparent
@@ -118,6 +112,9 @@
     height: 48px
     margin-bottom: 24px
     width: 48px
+
+    &--dark_green
+      background-color: #00635b
 
     &--green
       background-color: #00e0b4

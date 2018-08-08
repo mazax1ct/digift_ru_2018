@@ -13,9 +13,9 @@
   </head>
   <body>
     <!--//= template/sprite.html-->
-    <div class="container">
-      //= template/header.html
-      <section class="section">
+    //= template/header.html
+    <div id="fullpage" class="container">
+      <section class="page-section section">
         <div class="grid">
           <div class="block-1 col col--big column align-end justify-end">
             <img class="block-2" src="images/decor/block-2.png" alt="">
@@ -28,8 +28,8 @@
         <div class="links">
           <a class="link link--green_bg link--dark_text" href="#">
             <span class="link__title-block">
-              <span class="link__title">Для<br> ритейла</span>
               <span class="link__icon"></span>
+              <span class="link__title">Для<br> ритейла</span>
             </span>
             <span class="link__text-block">
               <span class="link__text">Готовая витрина подарочных карт. Разработка индивидуальных проектов для digital программ мотивации</span>
@@ -38,8 +38,8 @@
           </a>
           <a class="link link--blue_bg" href="#">
             <span class="link__title-block">
-              <span class="link__title">Для программ<br> лояльности</span>
               <span class="link__icon link__icon--white"></span>
+              <span class="link__title">Для программ<br> лояльности</span>
             </span>
             <span class="link__text-block">
               <span class="link__text">Готовая витрина подарочных карт. Разработка индивидуальных проектов для digital программ мотивации</span>
@@ -48,8 +48,8 @@
           </a>
           <a class="link link--light_blue_bg" href="#">
             <span class="link__title-block">
-              <span class="link__title">Корпоративным<br> покупателям</span>
               <span class="link__icon link__icon--white"></span>
+              <span class="link__title">Корпоративным<br> покупателям</span>
             </span>
             <span class="link__text-block">
               <span class="link__text">Готовая витрина подарочных карт. Разработка индивидуальных проектов для digital программ мотивации</span>
@@ -58,7 +58,7 @@
           </a>
         </div>
       </section>
-      <section class="section">
+      <section class="page-section section">
         <div class="grid">
           <div class="col col--small column align-center dots-container" id="dots_1">
             <div>
@@ -223,22 +223,22 @@
           </div>
         </div>
       </section>
-      <section class="js-section-dark section section--text_white section--light_blue" style="background-image: url('images/backgrounds/bg_1.jpg')">
+      <section class="js-section-dark page-section section section--text_white section--light_blue" style="background-image: url('images/backgrounds/bg_1.jpg')">
         <div class="grid">
           <div class="col col--small column align-center">
             <div>
               <h2>Технологии</h2>
-              <p>Нужен текст. Врезки с заголовком кейса, вводным предложением + кнопкой "Читать подробнее"</p>
+              <p class="opacity_08">Нужен текст. Врезки с заголовком<br> кейса, вводным предложением + кнопкой "Читать подробнее"</p>
             </div>
           </div>
           <div class="col col--big column align-end justify-end">
             <div class="cards">
               <a class="card" href="#">
                 <span class="card__front card__front--align_end card__front--green_bg">
-                  <span class="card__icon"></span>
+                  <span class="card__icon card__icon--dark_green"></span>
                   Открытое<br> API
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -247,7 +247,7 @@
                   <span class="card__icon card__icon--green"></span>
                   Бесплатные<br> обновления
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -256,7 +256,7 @@
                   <span class="card__icon card__icon--white"></span>
                   Профессиональная<br> аналитика
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -265,7 +265,7 @@
                   <span class="card__icon card__icon--green"></span>
                   Техподдержка<br> 24*7
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -274,7 +274,7 @@
                   <span class="card__icon card__icon--white"></span>
                   Дополнительная<br> кастомизация
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -283,7 +283,7 @@
                   <span class="card__icon card__icon--white"></span>
                   Новейшие<br> технологии
                 </span>
-                <span class="card__back card__back--decorated card__back--decorated_green">
+                <span class="card__back">
                   Мы постоянно работаем над улучшением и развитием сервиса. Все обновления - бесплатны для наших партнеров.
                 </span>
               </a>
@@ -291,7 +291,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--text_white section--light_blue">
+      <section class="page-section section section--text_white section--light_blue">
         <div class="grid">
           <div class="col col--small column align-center dots-container dots-white" id="dots_2">
             <div>
@@ -367,7 +367,7 @@
           </div>
         </div>
       </section>
-      <section class="js-section-light section" style="background-color: #bef3e8">
+      <section class="js-section-light page-section section" style="background-color: #bef3e8">
         <div class="grid">
           <div class="col col--small column align-center dots-container" id="dots_3">
             <div>
@@ -443,33 +443,48 @@
           </div>
         </div>
       </section>
-      <div class="request">
-        <div class="request__block">
-          <div class="request__text">
-            <p class="request__title">Бесплатная<br> установка сервиса</p>
-            <p>Вы платите комиссию только комиссию<br> с реализованных карт</p>
+      <div class="page-section fp-auto-height">
+        <div class="request">
+          <div class="request__block">
+            <div class="request__text">
+              <p class="request__title">Бесплатная<br> установка сервиса</p>
+              <p>Вы платите комиссию только комиссию<br> с реализованных карт</p>
+            </div>
           </div>
-        </div>
-        <div class="request__block">
-          <form class="request__form" action="/" method="get">
-            <label class="label" for="name">
-              <input class="js-input input" name="name" type="text" value="">
-              <span class="label__placeholder">Ваше имя</span>
-            </label>
-            <label class="label" for="email">
-              <input class="js-input input error" name="email" type="email" value="">
-              <span class="label__placeholder">Email</span>
-            </label>
-            <label class="label" for="phone">
-              <input class="js-input input" name="phone" type="tel" value="">
-              <span class="label__placeholder">Телефон</span>
-            </label>
-            <button class="button" type="submit">Связаться с нами</button>
-          </form>
+          <div class="request__block">
+            <form class="request__form" action="/" method="get">
+              <label class="label" for="name">
+                <input class="js-input input" name="name" type="text" value="">
+                <span class="label__placeholder">Ваше имя</span>
+              </label>
+              <label class="label" for="email">
+                <input class="js-input input error" name="email" type="email" value="">
+                <span class="label__placeholder">Email</span>
+              </label>
+              <label class="label" for="phone">
+                <input class="js-input input" name="phone" type="tel" value="">
+                <span class="label__placeholder">Телефон</span>
+              </label>
+              <button class="button" type="submit">Связаться с нами</button>
+            </form>
+          </div>
         </div>
       </div>
       //= template/footer.html
     </div>
     //= template/scripts.html
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          sectionSelector: '.page-section',
+          licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+          autoScrolling: true,
+          scrollHorizontally: false,
+          bigSectionsDestination: 'bottom'
+        });
+      });
+    </script>
   </body>
 </html>

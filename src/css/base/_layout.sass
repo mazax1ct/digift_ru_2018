@@ -11,7 +11,7 @@ body
   background-color: #f3f3f3
   height: 100%
   min-height: 100%
-  min-width: 992px
+  min-width: 1020px
   overflow-wrap: break-word
   position: relative
 
@@ -28,6 +28,7 @@ body
   margin-right: auto
 
 .section
+  background-image: linear-gradient(to top, rgba(225, 227, 230, 0.3), #ebecef)
   background-position: 50% 50%
   background-repeat: no-repeat
   background-size: cover
@@ -36,6 +37,7 @@ body
   position: relative
 
   &--light_blue
+    background-image: none
     background-color: #504bc3
 
 .grid
@@ -51,13 +53,9 @@ body
       width: 41.667%
 
   &--small
-    padding-left: 45px
-    padding-right: 45px
+    padding-left: 6.25%
+    padding-right: 6.25%
     width: 37.5%
-
-    @media(min-width: 1440px)
-      padding-left: 90px
-      padding-right: 90px
 
     & + .col--big
       width: 62.5%
