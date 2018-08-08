@@ -19,22 +19,23 @@
       display: flex
 
 .articles-slider
-  height: 56.22%
-  max-height: 506px
-  max-width: 1152px
-  margin-right: -22.05%
-  white-space: nowrap
+  margin-right: -32.7%
+  width: 948px
+
+  @media(min-width: 1440px)
+    width: 1152px
 
   .slick-list,
   .slick-track
-    height: 100%
+    align-items: stretch
+    display: flex
 
   .slick-next,
   .slick-prev
     top: 50%
 
   .slick-next
-    right: calc(20.5% + 24px)
+    right: calc(32.7% + 32px)
 
     @media(min-width: 1440px)
       right: calc(20% + 14px)
@@ -43,13 +44,14 @@
       right: 65px
 
   &__slide
-    display: inline-block
-    vertical-align: top
-    white-space: normal
-
     .article
+      font-size: 16px
       height: 100%
-      margin-right: 24px
+      margin-right: 16px
+
+      @media(min-width: 1440px)
+        font-size: 18px
+        margin-right: 24px
 
 .no_pointer_events
   .card,

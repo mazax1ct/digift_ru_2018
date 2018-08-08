@@ -1,0 +1,42 @@
+.request
+  background-color: #fff
+  display: flex
+  padding: 24px 24px 0
+
+  &__block
+    align-items: center
+    background-color: #f5f6f7
+    color: #616161
+    display: flex
+    justify-content: center
+    flex-flow: column
+    padding-top: 96px
+    padding-bottom: 108px
+    width: 50%
+
+    &:first-child
+      border-right: 2px solid #fff
+
+    &:last-child
+      border-left: 2px solid #fff
+
+  &__text
+    background: url('../images/decor/form-decor.png') no-repeat 0 0 transparent
+    padding-top: 96px
+
+    @media(min-width: 1440px)
+      background-position: 0 10px
+      padding-top: 0
+      padding-left: 96px
+
+  &__title
+    color: #1e1e1e
+    font-size: 28px
+    line-height: 34px
+
+    @media(min-width: 1440px)
+      font-size: 32px
+      line-height: 45px
+
+  &__form
+    width: 276px

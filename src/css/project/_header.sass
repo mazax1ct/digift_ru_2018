@@ -1,9 +1,17 @@
 .header
   left: 0
+  opacity: 1
   position: fixed
   top: 0
+  transition: z-index 0.5s, opacity 0.3s
   width: 100%
   z-index: 2
+
+  &.visibility-hidden
+    opacity: 0
+
+  &.hidden
+    z-index: -1
 
   &__inner
     align-items: center
@@ -32,18 +40,17 @@
 
   &__link
     color: #1e1e1e
-    margin-left: 34px
+    margin-left: 42px
+    opacity: 1
     padding-top: 4px
     padding-bottom: 3px
+    transition: color 0.3s, opacity 0.3s
     text-decoration: none
 
     &:hover
-      text-decoration: underline
+      opacity: 0.8
 
     @media(min-width: 1200px)
-      margin-left: 54px
-
-    @media(min-width: 1440px)
       margin-left: 72px
 
     &--buy-link
@@ -60,3 +67,7 @@
 
       @media(min-width: 1440px)
         margin-left: auto
+
+    .xs-hidden
+      @media(max-width: 1199px)
+        display: none

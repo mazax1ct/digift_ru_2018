@@ -1,17 +1,54 @@
-//изменение цвета меню
-$('.js-section-dark').waypoint(function(direction) {
-  $('.main-menu').toggleClass('white');
-}, {
-  offset: '50'
-});
-
-$('.js-section-light').waypoint(function(direction) {
-  $('.main-menu').toggleClass('white');
-}, {
-  offset: '50'
-});
-
 $(document).ready(function() {
+  //full-page
+  $('#fullpage').fullpage({
+    sectionSelector: '.js-page-section',
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    autoScrolling: true,
+    scrollOverflow: true,
+    scrollOverflowReset: true,
+    scrollOverflowOptions: {
+      mouseWheel: true,
+      scrollbars: true,
+      useTransform: true,
+      useTransition: true,
+      HWCompositing: true,
+      bounce: true
+    },
+    onLeave: function(origin, destination, direction) {
+      var params = {
+        origin: origin,
+        destination: destination,
+        direction: direction
+      };
+      if(params.destination.item.classList.contains('dark')) {
+        $('.main-menu').addClass('white');
+      } else {
+        $('.main-menu').removeClass('white');
+      }
+      if(params.destination.item.classList.contains('last')) {
+        $('.header').addClass('visibility-hidden');
+      } else {
+        $('.header').removeClass('hidden').removeClass('visibility-hidden');
+      }
+    },
+    afterLoad: function(origin, destination, direction) {
+      var params = {
+        origin: origin,
+        destination: destination,
+        direction: direction
+      };
+      if(params.destination.item.classList.contains('last')) {
+        $('.header').addClass('hidden');
+      }
+    },
+    afterRender: function() {
+      var section = this;
+      if(section.isFirst === true && section.item.classList.contains('dark')){
+        $('.main-menu').addClass('white');
+      }
+    }
+  });
+
   //слайдер карточек
   if ($(".js-cards-slider").length) {
     $('.js-cards-slider').each(function( index ) {
