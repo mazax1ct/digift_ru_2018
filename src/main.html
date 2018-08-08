@@ -15,7 +15,7 @@
     <!--//= template/sprite.html-->
     //= template/header.html
     <div id="fullpage" class="container">
-      <section class="page-section section">
+      <section class="js-page-section section">
         <div class="grid">
           <div class="block-1 col col--big column align-end justify-end">
             <img class="block-2" src="images/decor/block-2.png" alt="">
@@ -58,7 +58,7 @@
           </a>
         </div>
       </section>
-      <section class="page-section section">
+      <section class="js-page-section section">
         <div class="grid">
           <div class="col col--small column align-center dots-container" id="dots_1">
             <div>
@@ -223,7 +223,7 @@
           </div>
         </div>
       </section>
-      <section class="js-section-dark page-section section section--text_white section--light_blue" style="background-image: url('images/backgrounds/bg_1.jpg')">
+      <section class="js-page-section js-section-dark section section--text_white section--light_blue" style="background-image: url('images/backgrounds/bg_1.jpg')">
         <div class="grid">
           <div class="col col--small column align-center">
             <div>
@@ -291,7 +291,7 @@
           </div>
         </div>
       </section>
-      <section class="page-section section section--text_white section--light_blue">
+      <section class="js-page-section section section--text_white section--light_blue">
         <div class="grid">
           <div class="col col--small column align-center dots-container dots-white" id="dots_2">
             <div>
@@ -367,7 +367,7 @@
           </div>
         </div>
       </section>
-      <section class="js-section-light page-section section" style="background-color: #bef3e8">
+      <section class="js-section-light js-page-section section" style="background-color: #bef3e8">
         <div class="grid">
           <div class="col col--small column align-center dots-container" id="dots_3">
             <div>
@@ -443,7 +443,7 @@
           </div>
         </div>
       </section>
-      <div class="page-section fp-auto-height">
+      <div class="js-page-section">
         <div class="request">
           <div class="request__block">
             <div class="request__text">
@@ -469,20 +469,29 @@
             </form>
           </div>
         </div>
+        //= template/footer.html
       </div>
-      //= template/footer.html
     </div>
     //= template/scripts.html
+    <script src="js/scrolloverflow.min.js"></script>
     <script src="js/fullpage.extensions.min.js"></script>
     <script src="js/fullpage.min.js"></script>
     <script>
       $(document).ready(function() {
         $('#fullpage').fullpage({
-          sectionSelector: '.page-section',
+          sectionSelector: '.js-page-section',
           licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
           autoScrolling: true,
-          scrollHorizontally: false,
-          bigSectionsDestination: 'bottom'
+          scrollOverflow: true,
+          scrollOverflowReset: true,
+          scrollOverflowOptions: {
+            mouseWheel: true,
+            scrollbars: true,
+            useTransform: true,
+            useTransition: true,
+            HWCompositing: true,
+            bounce: true
+          }
         });
       });
     </script>
