@@ -150,11 +150,6 @@ $(document).ready(function() {
         $('.header').addClass('fader').stop(true, true);
         $('.main-menu__dropdown').fadeOut(200).stop(true, true);
         $(this).next('.main-menu__dropdown').fadeIn(200).stop(true, true);
-        /*setTimeout(function() {
-          $('.main-menu__link').removeClass('drop-open');
-          $('.header').removeClass('fader').stop(true, true);
-          $('.main-menu__dropdown').fadeOut(200).stop(true, true);
-        }, 4000);*/
         return false;
       } else {
         return true;
@@ -180,7 +175,7 @@ $(document).ready(function() {
       $(this).find('.main-menu__dropdown').fadeIn(200);
     }, function() {
       //исчезает дропдаун
-      $(this).find('.main-menu__dropdown').fadeOut(200);
+      $(this).find('.main-menu__dropdown').stop(true, true).fadeOut(200);
       //класс для обраной анаимации псевдоэлемента
       $('.header').addClass('fade-out');
       //полностью убираем псевдоэлемент
