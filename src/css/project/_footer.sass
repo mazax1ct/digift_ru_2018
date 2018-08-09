@@ -19,6 +19,7 @@
 
   &__logo
     display: inline-block
+    min-width: 120px
     width: 120px
 
   &__copyright
@@ -37,6 +38,11 @@
 
     &:last-child
       margin-right: 0
+
+  &__link-icon
+    fill: #1e1e1e
+    height: 20px
+    width: 20px
 
 .footer-menu
   font-size: 16px
@@ -72,12 +78,17 @@
   &__link
     color: #1e1e1e
     display: inline-block
+    opacity: 1
     padding-top: 5px
     padding-bottom: 5px
+    transition: opacity 0.3s
     text-decoration: none
 
     &--phone
       font-size: 22px
 
     &:hover
-      text-decoration: underline
+      opacity: 0.8
+
+    &:active
+      opacity: 1

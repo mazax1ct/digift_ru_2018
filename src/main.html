@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
+    //= template/favicon.html
+
     //= template/style.html
   </head>
   <body>
-    <!--//= template/sprite.html-->
+    //= template/sprite.html
     //= template/header.html
     <div id="fullpage" class="container">
       <section class="js-page-section section" style="background-image: url('images/backgrounds/grey-section-1.jpg')">
@@ -26,7 +28,7 @@
         <div class="links">
           <a class="link link--green_bg link--dark_text" href="#">
             <span class="link__title-block">
-              <span class="link__icon"></span>
+              <svg class="link__icon" aria-hidden="true"><use xlink:href="#retail"/></svg>
               <span class="link__title">Для<br> ритейла</span>
             </span>
             <span class="link__text-block">
@@ -36,7 +38,7 @@
           </a>
           <a class="link link--blue_bg" href="#">
             <span class="link__title-block">
-              <span class="link__icon link__icon--white"></span>
+              <svg class="link__icon link__icon--white" aria-hidden="true"><use xlink:href="#loyalty"/></svg>
               <span class="link__title">Для программ<br> лояльности</span>
             </span>
             <span class="link__text-block">
@@ -46,7 +48,7 @@
           </a>
           <a class="link link--light_blue_bg" href="#">
             <span class="link__title-block">
-              <span class="link__icon link__icon--white"></span>
+              <svg class="link__icon link__icon--white" aria-hidden="true"><use xlink:href="#buyer"/></svg>
               <span class="link__title">Корпоративным<br> покупателям</span>
             </span>
             <span class="link__text-block">
@@ -58,7 +60,7 @@
       </section>
       <section class="js-page-section section" style="background-image: url('images/backgrounds/grey-section-2.jpg')">
         <div class="grid">
-          <div class="col col--small column align-center dots-container" id="dots_1">
+          <div class="col col--small column align-center dots-container" id="partners-slider-dots">
             <div>
               <h2>Наши партнеры</h2>
               <p>Наш сервис электронных подарочных карт установлен на сайте крупных российских ритейлеров</p>
@@ -66,7 +68,7 @@
             </div>
           </div>
           <div class="col col--big column align-end justify-end">
-            <div class="js-cards-slider cards-slider" data-dots="dots_1">
+            <div class="js-partners-slider cards-slider dark-arrows">
               <div class="cards-slider__slide">
                 <div class="cards">
                   <div class="card">
@@ -239,7 +241,7 @@
             <div class="cards">
               <div class="card">
                 <div class="card__front card__front--align_end card__front--green_bg">
-                  <span class="card__icon card__icon--dark_green"></span>
+                  <svg class="card__icon card__icon--dark_green" aria-hidden="true"><use xlink:href="#api"/></svg>
                   Открытое<br> API
                 </div>
                 <a class="card__back card__back--top_to_bottom" href="#">
@@ -248,7 +250,7 @@
               </div>
               <div class="card">
                 <div class="card__front card__front--align_end card__front--text_white">
-                  <span class="card__icon card__icon--green"></span>
+                  <svg class="card__icon card__icon--green" aria-hidden="true"><use xlink:href="#updates"/></svg>
                   Бесплатные<br> обновления
                 </div>
                 <a class="card__back card__back--top_to_bottom" href="#">
@@ -257,7 +259,7 @@
               </div>
               <div class="card">
                 <div class="card__front card__front--align_end card__front--light_blue_bg card__front--text_white">
-                  <span class="card__icon card__icon--white"></span>
+                  <svg class="card__icon card__icon--white card__icon--opacity_05" aria-hidden="true"><use xlink:href="#none"/></svg>
                   Профессиональная<br> аналитика
                 </div>
                 <a class="card__back card__back--top_to_bottom" href="#">
@@ -266,7 +268,7 @@
               </div>
               <div class="card">
                 <div class="card__front card__front--align_end card__front--text_white">
-                  <span class="card__icon card__icon--green"></span>
+                  <svg class="card__icon card__icon--green" aria-hidden="true"><use xlink:href="#support"/></svg>
                   Техподдержка<br> 24*7
                 </div>
                 <a class="card__back" href="#">
@@ -275,7 +277,7 @@
               </div>
               <div class="card">
                 <div class="card__front card__front--align_end card__front--blue_bg card__front--text_white">
-                  <span class="card__icon card__icon--white"></span>
+                  <svg class="card__icon card__icon--white" aria-hidden="true"><use xlink:href="#custom"/></svg>
                   Дополнительная<br> кастомизация
                 </div>
                 <a class="card__back" href="#">
@@ -284,7 +286,7 @@
               </div>
               <div class="card">
                 <div class="card__front card__front--align_end card__front--text_white">
-                  <span class="card__icon card__icon--white"></span>
+                  <svg class="card__icon card__icon--white card__icon--opacity_05" aria-hidden="true"><use xlink:href="#none"/></svg>
                   Новейшие<br> технологии
                 </div>
                 <a class="card__back" href="#">
@@ -297,7 +299,7 @@
       </section>
       <section class="js-page-section section section--text_white section--light_blue dark">
         <div class="grid">
-          <div class="col col--small column align-center dots-container dots-white" id="dots_2">
+          <div class="col col--small column align-center dots-container dots-white" id="blog-slider-dots">
             <div>
               <h2>Блог</h2>
               <p class="opacity_08">Нужен текст. Врезки с заголовком кейса, вводным предложением + кнопкой "Читать подробнее"</p>
@@ -305,7 +307,7 @@
             </div>
           </div>
           <div class="col col--big column align-center">
-            <div class="js-articles-slider articles-slider" data-dots="dots_2">
+            <div class="js-blog-slider articles-slider dark-arrows">
               <div class="articles-slider__slide">
                 <a class="article" href="#">
                   <span class="article__image">
@@ -378,14 +380,13 @@
                   </span>
                 </a>
               </div>
-              <div class="articles-slider__slide"></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="js-page-section section" style="background-color: #bef3e8">
+      <section class="js-page-section section section--no_gradient" style="background-color: #bef3e8">
         <div class="grid">
-          <div class="col col--small column align-center dots-container" id="dots_3">
+          <div class="col col--small column align-center dots-container" id="articles-slider-dots">
             <div>
               <h2>СМИ о нас</h2>
               <p class="opacity_08">Нужен текст. Врезки с заголовком кейса, вводным предложением + кнопкой "Читать подробнее"</p>
@@ -393,10 +394,10 @@
             </div>
           </div>
           <div class="col col--big column align-center">
-            <div class="js-articles-slider articles-slider" data-dots="dots_3">
+            <div class="js-articles-slider articles-slider dark-arrows">
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #feebef"><img src="images/content/img11.jpg" alt=""></span>
+                  <span class="article__image"><img src="images/content/img17.jpg" alt="Digift - сервис для создания электронных подарочных карт"></span>
                   <span class="article__text">
                     <span class="article__tag">22 ОКТ</span>
                     <span class="article__preview-text">Digift - сервис для создания электронных подарочных карт</span>
@@ -406,7 +407,7 @@
               </div>
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #e0fff9"><img src="images/content/img12.jpg" alt=""></span>
+                  <span class="article__image"><img src="images/content/img18.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
                   <span class="article__text">
                     <span class="article__tag">11 ОКТ</span>
                     <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
@@ -416,7 +417,7 @@
               </div>
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #206297"><img src="images/content/img12.jpg" alt=""></span>
+                  <span class="article__image"><img src="images/content/img19.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
                   <span class="article__text">
                     <span class="article__tag">29 СЕНТ</span>
                     <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
@@ -426,35 +427,40 @@
               </div>
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #feebef"><img src="images/content/img11.jpg" alt=""></span>
+                  <span class="article__image">
+                    <img src="images/content/img14.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
+                  </span>
                   <span class="article__text">
-                    <span class="article__tag">22 ОКТ</span>
-                    <span class="article__preview-text">Digift - сервис для создания электронных подарочных карт</span>
+                    <span class="article__tag">АНАЛИТИКА</span>
+                    <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
                     <span class="article__more">Подробнее</span>
                   </span>
                 </a>
               </div>
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #e0fff9"><img src="images/content/img12.jpg" alt=""></span>
+                  <span class="article__image">
+                    <img src="images/content/img15.jpg" alt="Диджитализация подарочных карт Рив Гош">
+                  </span>
                   <span class="article__text">
-                    <span class="article__tag">11 ОКТ</span>
-                    <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
-                    <span class="article__more">Подробнее</span>
+                    <span class="article__tag">КЕЙСЫ</span>
+                    <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
+                    <span class="article__more">Читать кейс</span>
                   </span>
                 </a>
               </div>
               <div class="articles-slider__slide">
                 <a class="article" href="#">
-                  <span class="article__image" style="background-color: #206297"><img src="images/content/img12.jpg" alt=""></span>
+                  <span class="article__image">
+                    <img src="images/content/img16.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
+                  </span>
                   <span class="article__text">
-                    <span class="article__tag">29 СЕНТ</span>
-                    <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
+                    <span class="article__tag">АНАЛИТИКА</span>
+                    <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
                     <span class="article__more">Подробнее</span>
                   </span>
                 </a>
               </div>
-              <div class="articles-slider__slide"></div>
             </div>
           </div>
         </div>
@@ -465,11 +471,5 @@
       </div>
     </div>
     //= template/scripts.html
-
-    <script>
-      $(document).ready(function() {
-
-      });
-    </script>
   </body>
 </html>

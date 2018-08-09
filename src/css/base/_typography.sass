@@ -87,7 +87,7 @@ img
   width: 100%
 
 .more-link
-  background-image: url('../images/icons/more.jpg')
+  background-image: url('../images/icons/more-link.svg')
   background-position: 0 50%
   background-repeat: no-repeat
   background-color: transparent
@@ -97,19 +97,23 @@ img
   min-height: 37px
   padding-left: 55px
   text-decoration: none
+  transition: opacity 0.3s
 
   &--text_white
     color: #fff
 
   &--icon_white
-    background-image: url('../images/icons/more_white.jpg')
+    background-image: url('../images/icons/more-link-white.svg')
 
   &--icon_colored
-    background-image: url('../images/icons/more_colored.jpg')
+    background-image: url('../images/icons/more-link-colored.svg')
 
 a.more-link
   &:hover
-    text-decoration: underline
+    opacity: 0.8
+
+  &:active
+    opacity: 1
 
 .opacity_08
   opacity: 0.8

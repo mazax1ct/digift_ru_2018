@@ -3,6 +3,7 @@
 
 .cards-slider
   height: 100%
+  max-width: 900px
   width: 100%
 
   .slick-list,
@@ -24,6 +25,10 @@
 
   @media(min-width: 1440px)
     width: 1152px
+
+  @media(min-width: 1900px)
+    margin-right: auto
+    margin-left: auto
 
   .slick-list,
   .slick-track
@@ -52,6 +57,19 @@
       @media(min-width: 1440px)
         font-size: 18px
         margin-right: 24px
+
+  &__slide-fake
+    background-color: rgba(255,255,255,0.01)
+    display: block
+    height: 100%
+    max-width: 360px
+    min-width: 300px
+    margin-right: 16px
+    opacity: 0.01
+
+    @media(min-width: 1440px)
+      margin-right: 24px
+
 
 .no_pointer_events
   .card,

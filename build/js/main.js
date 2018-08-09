@@ -49,41 +49,94 @@ $(document).ready(function() {
     }
   });
 
-  //слайдер карточек
-  if ($(".js-cards-slider").length) {
-    $('.js-cards-slider').each(function( index ) {
-      $(this).slick({
-        infinite: false,
-        edgeFriction: 0,
-        prevArrow: '<button type="button" class="slick-prev" title="Назад"><img src="images/icons/slider_left.jpg"></button>',
-        nextArrow: '<button type="button" class="slick-next" title="Вперед"><img src="images/icons/slider_right.jpg"></button>',
-        dots: true,
-        appendDots: $('#'+ $(this).attr("data-dots") +'')
-      });
+  //слайдер карточек партнеров
+  if ($(".js-partners-slider").length) {
+    $('.js-partners-slider').slick({
+      infinite: false,
+      edgeFriction: 0,
+      prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
+      dots: true,
+      appendDots: $('#partners-slider-dots')
     });
   }
 
   //убираем эвенты при перелистывании
-  $('.js-cards-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.js-partners-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $(this).addClass('no_pointer_events');
   });
 
-  $('.js-cards-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  $('.js-partners-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     $(this).removeClass('no_pointer_events');
   });
 
-  //слайдер статей
+  //слайдер блога
+  if ($(".js-blog-slider").length) {
+    $('.js-blog-slider').slick({
+      slidesToShow: 3,
+      infinite: false,
+      edgeFriction: 0,
+      prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
+      dots: true,
+      appendDots: $('#blog-slider-dots'),
+      responsive: [
+        {
+          breakpoint: 1900,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    });
+    var sliderSlidesCount = $('.js-blog-slider').slick('getSlick').$slides.length;
+
+    //добавляем пустой слайд в конец слайдера после инициализации, если ширина окна меньше 1900
+    if($('body').width() < 1900){
+      $('.js-blog-slider').slick('slickAdd', '<div class="articles-slider__slide"><div class="articles-slider__slide-fake"></div></div>');
+    }
+    //удаляем последний пустой слайд, при достижении брейкпоинта 1900
+    $('.js-blog-slider').on('breakpoint', function(e) {
+      $(this).slick('slickRemove', sliderSlidesCount - 1);
+    });
+  }
+
+  //убираем эвенты при перелистывании
+  $('.js-blog-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $(this).addClass('no_pointer_events');
+  });
+
+  $('.js-blog-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $(this).removeClass('no_pointer_events');
+  });
+
+  //слайдер сми
   if ($(".js-articles-slider").length) {
-    $('.js-articles-slider').each(function( index ) {
-      $(this).slick({
-        slidesToShow: 3,
-        infinite: false,
-        edgeFriction: 0,
-        prevArrow: '<button type="button" class="slick-prev" title="Назад"><img src="images/icons/slider_left.jpg"></button>',
-        nextArrow: '<button type="button" class="slick-next" title="Вперед"><img src="images/icons/slider_right.jpg"></button>',
-        dots: true,
-        appendDots: $('#'+ $(this).attr("data-dots") +'')
-      });
+    $('.js-articles-slider').slick({
+      slidesToShow: 3,
+      infinite: false,
+      edgeFriction: 0,
+      prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
+      dots: true,
+      appendDots: $('#articles-slider-dots'),
+      responsive: [
+        {
+          breakpoint: 1900,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    });
+    var sliderSlidesCount = $('.js-articles-slider').slick('getSlick').$slides.length;
+    //добавляем пустой слайд в конец слайдера после инициализации, если ширина окна меньше 1900
+    if($('body').width() < 1900){
+      $('.js-articles-slider').slick('slickAdd', '<div class="articles-slider__slide"><div class="articles-slider__slide-fake"></div></div>');
+    }
+    //удаляем последний пустой слайд, при достижении брейкпоинта 1900
+    $('.js-articles-slider').on('breakpoint', function(e) {
+      $(this).slick('slickRemove', sliderSlidesCount - 1);
     });
   }
 
@@ -98,7 +151,6 @@ $(document).ready(function() {
 
   //форма
   $('.js-input').each(function( index ) {
-
     if ($(this).val() != 0) {
       $(this).addClass("changed");
     } else {
@@ -113,18 +165,4 @@ $(document).ready(function() {
       }
     });
   });
-
-  //новость
-  $('.js-article').click(function() {
-    $('body').addClass('overflow-hidden');
-    $('.article-detail').addClass('is-open');
-    return false;
-  });
-
-  $('.js-article-close').click(function() {
-    $('.article-detail').removeClass('is-open');
-    $('body').removeClass('overflow-hidden');
-    return false;
-  });
-
 });
