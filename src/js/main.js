@@ -177,7 +177,7 @@ $(document).ready(function() {
       //появляется псевдоэлемент с затенением
       $('.header').addClass('fader').stop(true, true);
       //появляется дропдаун
-      $(this).find('.main-menu__dropdown').fadeIn(200).stop(true, true);
+      $(this).find('.main-menu__dropdown').fadeIn(200);
     }, function() {
       //исчезает дропдаун
       $(this).find('.main-menu__dropdown').fadeOut(200);
