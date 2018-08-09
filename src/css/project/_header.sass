@@ -13,6 +13,32 @@
   &.hidden
     z-index: -1
 
+  &::after
+    background-color: #f0f1f3
+    content: ''
+    height: 0
+    left: 50%
+    opacity: 0
+    position: fixed
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: height 0s, width 0s, opacity 0.3s
+    visibility: hidden
+    width: 0
+    z-index: -1
+
+  &.fader
+    &::after
+      display: block
+      height: 100%
+      opacity: 0.3
+      visibility: visible
+      width: 100%
+
+  &.fade-out
+    &::after
+      opacity: 0
+
   &__inner
     align-items: center
     display: flex
@@ -39,36 +65,99 @@
     .main-menu__link
       color: #fff
 
-  &__link
-    color: #1e1e1e
+  &__item
     margin-left: 42px
-    opacity: 1
-    padding-top: 4px
-    padding-bottom: 3px
-    transition: color 0.3s, opacity 0.3s
-    text-decoration: none
-
-    &:hover
-      opacity: 0.8
+    position: relative
 
     @media(min-width: 1200px)
       margin-left: 72px
 
-    &--buy-link
-      background: url('../images/icons/buy-card.svg') no-repeat 100% 50% transparent
-      color: #262626
+    &:last-child
       margin-left: auto
-      padding-top: 4px
-      padding-bottom: 3px
-      padding-right: 58px
-      text-decoration: none
 
       @media(min-width: 1200px)
         margin-left: auto
 
-      @media(min-width: 1440px)
-        margin-left: auto
+    //&:hover
+      .main-menu__dropdown
+        display: block
+
+  &__dropdown
+    display: none
+    left: -24px
+    position: absolute
+    padding-top: 65px
+    top: 0
+    z-index: 1
+
+  &__link
+    color: #1e1e1e
+    opacity: 1
+    padding-top: 10px
+    padding-bottom: 10px
+    position: relative
+    transition: color 0.3s, opacity 0.3s
+    text-decoration: none
+    z-index: 2
+
+    &:hover
+      opacity: 0.8
+
+    &--buy-link
+      background: url('../images/icons/buy-card.svg') no-repeat 100% 50% transparent
+      color: #262626
+      padding-top: 7px
+      padding-bottom: 5px
+      padding-right: 58px
+      text-decoration: none
 
     .xs-hidden
       @media(max-width: 1199px)
         display: none
+
+.dropdown
+  background-color: #4740e3
+  border-radius: 6px
+  font-size: 16px
+  line-height: 26px
+  letter-spacing: 0.5px
+  position: relative
+  width: 320px
+
+  &::after
+  	bottom: 100%
+  	left: 72px
+  	border: solid transparent
+  	content: ''
+  	height: 0
+  	width: 0
+  	position: absolute
+  	pointer-events: none
+  	border-color: rgba(71, 64, 227, 0)
+  	border-bottom-color: #4740e3
+  	border-width: 8px
+  	margin-left: -8px
+
+  &__link
+    color: #fff
+    display: block
+    padding: 15px 24px 23px
+    transition: background-color 0.3s
+    text-decoration: none
+
+    &:first-child
+      border-top-left-radius: 6px
+      border-top-right-radius: 6px
+
+    &:last
+      border-bottom-left-radius: 6px
+      border-bottom-right-radius: 6px
+
+    &:hover
+      background-color: rgba(255,255,255,0.12)
+
+.no-js
+  .main-menu__item
+    &:hover
+      .main-menu__dropdown
+        display: block

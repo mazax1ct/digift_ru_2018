@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="css/style.css?v1" />
   </head>
-  <body>
+  <body class="no-js">
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <symbol id="retail" viewBox="0 0 48 48">
         <g>
@@ -123,11 +123,37 @@
       <div class="header__inner">
         <a class="logo" href="main.html"><img src="images/logo.svg" alt="DIGIFT"></a>
         <nav class="main-menu">
-          <a class="main-menu__link" href="#">Для бизнеса</a>
-          <a class="main-menu__link" href="#">Аналитика</a>
-          <a class="main-menu__link" href="#">О компании</a>
-          <a class="main-menu__link" href="contacts.html">Контакты</a>
-          <a class="main-menu__link main-menu__link--buy-link" href="#">Купить <span class="xs-hidden">подарочную </span>карту</a>
+          <div class="js-root main-menu__item">
+            <a class="main-menu__link" href="contacts.html">Для бизнеса</a>
+            <div class="main-menu__dropdown">
+              <div class="dropdown">
+                <a class="dropdown__link" href="#">Партнеры</a>
+                <a class="dropdown__link" href="#">Процессинг и модули для продажи карт</a>
+                <a class="dropdown__link" href="contacts.html">Витрина для программ лояльности</a>
+                <a class="dropdown__link" href="#">Корпоративные продажи</a>
+                <a class="dropdown__link" href="#">Технологии</a>
+              </div>
+            </div>
+          </div>
+          <div class="main-menu__item">
+            <a class="main-menu__link" href="#">Аналитика</a>
+          </div>
+          <div class="js-root main-menu__item">
+            <a class="main-menu__link" href="#">О компании</a>
+            <div class="main-menu__dropdown">
+              <div class="dropdown">
+                <a class="dropdown__link" href="#">Пункт 1</a>
+                <a class="dropdown__link" href="#">Пункт 2</a>
+                <a class="dropdown__link" href="№">Пункт 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="main-menu__item">
+            <a class="main-menu__link" href="contacts.html">Контакты</a>
+          </div>
+          <div class="main-menu__item">
+            <a class="main-menu__link main-menu__link--buy-link" href="#">Купить <span class="xs-hidden">подарочную </span>карту</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -416,7 +442,7 @@
       </section>
       <section class="js-page-section section section--text_white section--light_blue dark">
         <div class="grid">
-          <div class="col col--small column align-center dots-container dots-white" id="blog-slider-dots">
+          <div id="blog-slider-dots" class="col col--small column align-center dots-container dots-white">
             <div>
               <h2>Блог</h2>
               <p class="opacity_08">Нужен текст. Врезки с заголовком кейса, вводным предложением + кнопкой "Читать подробнее"</p>
@@ -424,78 +450,80 @@
             </div>
           </div>
           <div class="col col--big column align-center">
-            <div class="js-blog-slider articles-slider dark-arrows">
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img14.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img15.jpg" alt="Диджитализация подарочных карт Рив Гош">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">КЕЙСЫ</span>
-                    <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
-                    <span class="article__more">Читать кейс</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img16.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img17.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img18.jpg" alt="Диджитализация подарочных карт Рив Гош">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">КЕЙСЫ</span>
-                    <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
-                    <span class="article__more">Читать кейс</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img19.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
+            <div id="blog-slider-arrows" class="articles-slider dark-arrows">
+              <div class="js-blog-slider articles-slider__inner">
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img14.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015 длинное название для проверки защиты от переполнения контентом</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img15.jpg" alt="Диджитализация подарочных карт Рив Гош">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">КЕЙСЫ</span>
+                      <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
+                      <span class="article__more">Читать кейс</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img16.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img17.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img18.jpg" alt="Диджитализация подарочных карт Рив Гош">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">КЕЙСЫ</span>
+                      <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
+                      <span class="article__more">Читать кейс</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img19.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -503,7 +531,7 @@
       </section>
       <section class="js-page-section section section--no_gradient" style="background-color: #bef3e8">
         <div class="grid">
-          <div class="col col--small column align-center dots-container" id="articles-slider-dots">
+          <div id="articles-slider-dots" class="col col--small column align-center dots-container">
             <div>
               <h2>СМИ о нас</h2>
               <p class="opacity_08">Нужен текст. Врезки с заголовком кейса, вводным предложением + кнопкой "Читать подробнее"</p>
@@ -511,72 +539,74 @@
             </div>
           </div>
           <div class="col col--big column align-center">
-            <div class="js-articles-slider articles-slider dark-arrows">
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image"><img src="images/content/img17.jpg" alt="Digift - сервис для создания электронных подарочных карт"></span>
-                  <span class="article__text">
-                    <span class="article__tag">22 ОКТ</span>
-                    <span class="article__preview-text">Digift - сервис для создания электронных подарочных карт</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image"><img src="images/content/img18.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
-                  <span class="article__text">
-                    <span class="article__tag">11 ОКТ</span>
-                    <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image"><img src="images/content/img19.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
-                  <span class="article__text">
-                    <span class="article__tag">29 СЕНТ</span>
-                    <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img14.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img15.jpg" alt="Диджитализация подарочных карт Рив Гош">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">КЕЙСЫ</span>
-                    <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
-                    <span class="article__more">Читать кейс</span>
-                  </span>
-                </a>
-              </div>
-              <div class="articles-slider__slide">
-                <a class="article" href="#">
-                  <span class="article__image">
-                    <img src="images/content/img16.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
-                  </span>
-                  <span class="article__text">
-                    <span class="article__tag">АНАЛИТИКА</span>
-                    <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
-                    <span class="article__more">Подробнее</span>
-                  </span>
-                </a>
+            <div id="articles-slider-arrows" class="articles-slider dark-arrows">
+              <div class="js-articles-slider articles-slider__inner">
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image"><img src="images/content/img17.jpg" alt="Digift - сервис для создания электронных подарочных карт"></span>
+                    <span class="article__text">
+                      <span class="article__tag">22 ОКТ</span>
+                      <span class="article__preview-text">Digift - сервис для создания электронных подарочных карт</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image"><img src="images/content/img18.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
+                    <span class="article__text">
+                      <span class="article__tag">11 ОКТ</span>
+                      <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image"><img src="images/content/img19.jpg" alt="Курс на digital: заменят ли электронне подарочные карты пластик?"></span>
+                    <span class="article__text">
+                      <span class="article__tag">29 СЕНТ</span>
+                      <span class="article__preview-text">Курс на digital: заменят ли электронне подарочные карты пластик?</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img14.jpg" alt="Первое в России исследование: Российский рынок электронных подарочных карт 2015">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Первое в России исследование: Российский рынок электронных подарочных карт 2015</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img15.jpg" alt="Диджитализация подарочных карт Рив Гош">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">КЕЙСЫ</span>
+                      <span class="article__preview-text">Диджитализация подарочных карт Рив Гош</span>
+                      <span class="article__more">Читать кейс</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="articles-slider__slide">
+                  <a class="article" href="#">
+                    <span class="article__image">
+                      <img src="images/content/img16.jpg" alt="Исследование рынка электронных подарочных карт за 2016 год">
+                    </span>
+                    <span class="article__text">
+                      <span class="article__tag">АНАЛИТИКА</span>
+                      <span class="article__preview-text">Исследование рынка электронных подарочных карт за 2016 год</span>
+                      <span class="article__more">Подробнее</span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -20,15 +20,23 @@
       display: flex
 
 .articles-slider
-  margin-right: -32.7%
-  width: 948px
+  max-width: 1152px
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  position: relative
+  width: 100%
 
-  @media(min-width: 1440px)
-    width: 1152px
+  &__inner
+    width: 948px
 
-  @media(min-width: 1900px)
-    margin-right: auto
-    margin-left: auto
+    @media(min-width: 1440px)
+      width: 1152px
+
+    @media(min-width: 1900px)
+      margin-right: auto
+      margin-left: auto
+
 
   .slick-list,
   .slick-track
@@ -40,13 +48,8 @@
     top: 50%
 
   .slick-next
-    right: calc(32.7% + 32px)
-
-    @media(min-width: 1440px)
-      right: calc(20% + 14px)
-
-    @media(min-width: 1920px)
-      right: 65px
+    @media(min-width: 1900px)
+      right: 69px
 
   &__slide
     .article

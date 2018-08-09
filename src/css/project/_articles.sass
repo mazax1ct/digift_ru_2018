@@ -8,9 +8,6 @@
   transition: opacity 0.3s
   text-decoration: none
 
-  @media(min-width: 1366px)
-    font-size: 16px
-
   @media(min-width: 1440px)
     font-size: 18px
 
@@ -41,6 +38,12 @@
 
   &__preview-text
     display: block
+    margin-bottom: 18px
+    max-height: 150px
+    overflow: hidden
+
+    @media(min-height: 768px)
+      max-height: 180px
 
   &__more
     background-image: url('../images/icons/more-link.svg')
@@ -51,7 +54,7 @@
     display: block
     line-height: 37px
     min-height: 37px
-    margin-top: 18px
+    margin-top: auto
     padding-right: 55px
     width: 100%
 
