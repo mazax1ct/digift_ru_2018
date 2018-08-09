@@ -1,0 +1,170 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4"></script>
+<script>
+  //карта в контактах
+  var xs = false;
+  var sm = false;
+  var md = false;
+  var lg = false;
+  var xl = false;
+  var xxl = false;
+
+  if($(window).width() > 1000 && $(window).width() < 1200){
+    xs = true;
+  }
+
+  if($(window).width() > 1199 && $(window).width() < 1366){
+    sm = true;
+  }
+
+  if($(window).width() > 1365 && $(window).width() < 1440){
+    md = true;
+  }
+
+  if($(window).width() > 1439 && $(window).width() < 1600){
+    lg = true;
+  }
+
+  if($(window).width() > 1599 && $(window).width() < 1800){
+    xl = true;
+  }
+
+  if($(window).width() > 1900){
+    xxl = true;
+  }
+
+  function initContactsMap() {
+    if(xs) {
+      var mapCenter = { lat: 59.990294, lng: 30.325250 };
+    }
+
+    if(sm) {
+      var mapCenter = { lat: 59.990294, lng: 30.325300 };
+    }
+
+    if(md) {
+      var mapCenter = { lat: 59.990294, lng: 30.326200 };
+    }
+
+    if(lg) {
+      var mapCenter = { lat: 59.990294, lng: 30.327000 };
+    }
+
+    if(xl) {
+      var mapCenter = { lat: 59.990294, lng: 30.327700 };
+    }
+
+    if(xxl) {
+      var mapCenter = { lat: 59.990294, lng: 30.329500 };
+    }
+
+    var myLatLng = { lat: 59.990094, lng: 30.318777 };
+
+    var stylesArray = [
+      {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#444444"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#f2f2f2"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+          {
+            "saturation": -100
+          },
+          {
+            "lightness": 45
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+          {
+            "visibility": "simplified"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#dedee4"
+          },
+          {
+            "visibility": "on"
+          }
+        ]
+      }
+    ];
+
+    var map = new google.maps.Map(document.getElementById("contacts-map"), {
+      zoom: 16,
+      center: mapCenter,
+      scrollwheel: true,
+      zoomControl: true,
+      scaleControl: true,
+      mapTypeControl: false,
+      streetViewControl: false,
+      styles: stylesArray
+    });
+
+    var image = {
+      url: "images/icons/map-pin.png",
+      size: new google.maps.Size(43, 51),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(21, 51)
+    };
+
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+    });
+  }
+  if ($("#contacts-map").length) {
+    initContactsMap();
+  }
+</script>

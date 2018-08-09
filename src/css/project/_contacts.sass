@@ -14,29 +14,44 @@
   position: absolute
   right: 0
   top: auto
-  width: 50%
+  width: 58.59%
   z-index: 1
+
+  @media(min-width: 1200px)
+    width: 50%
 
   &__left-block
     display: flex
     flex-flow: column
-    width: 41.667%
+    width: 50%
+
+    @media(min-width: 1200px)
+      width: 41.667%
 
   &__right-block
     align-items: center
     display: flex
     flex-flow: column
     justify-content: center
-    width: 58.333%
+    padding: 36px
+    position: relative
+    width: 50%
+
+    @media(min-height: 700px)
+      padding: 48px
+
+    @media(min-width: 1200px)
+      width: 58.333%
 
     .contacts__icon
-      background-color: #d8d8d8
+      fill: #7d7d7d
       left: auto
+      opacity: 0.3
       position: absolute
-      right: 24px
-      top: 24px
+      right: 36px
+      top: 36px
 
-      @media(min-width: 1440px)
+      @media(min-height: 700px)
         right: 48px
         top: 48px
 
@@ -46,14 +61,17 @@
     flex-flow: column
     justify-content: space-between
     height: 50%
-    padding: 24px
+    padding: 36px
 
-    @media(min-width: 1440px)
+    @media(min-height: 700px)
       padding: 48px
 
     .contacts__icon
-      background-color: #00635b
-      margin-left: auto
+      fill: #00635b
+
+    .contacts__label
+      color: #1e1e1e
+      opacity: 0.6
 
   &__address
     background-color: #4740e3
@@ -62,35 +80,35 @@
     flex-flow: column
     justify-content: space-between
     height: 50%
-    padding: 24px
+    padding: 36px
 
-    @media(min-width: 1440px)
+    @media(min-height: 700px)
       padding: 48px
+
+    .contacts__icon
+      fill: #fff
 
     .contacts__label
       color: #fff
-
-    .contacts__icon
-      background-color: #fff
-      margin-left: auto
+      opacity: 0.6
 
   &__icon
-    border-radius: 4px
     display: block
     height: 48px
     width: 48px
 
   &__label
-    color: #838383
+    color: #7d7d7d
+    font-size: 16px
+    line-height: 21px
+    letter-spacing: 0.5px
     margin-bottom: 0
 
-    @media(min-width: 1440px)
-      font-size: 16px
-
   &__text
-    font-weight: 400
+    font-size: 16px
 
     @media(min-height: 700px)
+      font-size: 20px
       margin-bottom: 60px
 
     &:last-child
@@ -98,7 +116,11 @@
 
   a
     color: #1e1e1e
+    transition: opacity 0.3s
     text-decoration: none
 
     &:hover
-      text-decoration: underline
+      opacity: 0.8
+
+    &:active
+      opacity: 1

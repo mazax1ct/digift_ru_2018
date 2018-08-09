@@ -3,29 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Digift.ru</title>
+    <title>Digift.ru - Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
+    //= template/favicon.html
+
     //= template/style.html
   </head>
-  <body>
-    <!--//= template/sprite.html-->
-    <div class="container">
-      //= template/header.html
-      <section class="section">
+  <body class="no-js">
+    //= template/sprite.html
+    //= template/header.html
+    <div id="fullpage" class="container">
+      <section class="js-page-section section">
         <div id="contacts-map" class="contacts-map"></div>
         <div class="contacts">
           <div class="contacts__left-block">
             <div class="contacts__phone">
-              <span class="contacts__icon"></span>
+              <svg class="contacts__icon" aria-hidden="true"><use xlink:href="#phone"/></svg>
               <div>
                 <p class="contacts__label">Телефон</p>
                 <p class="contacts__text"><a href="tel:88003330778">8 800 333 0778</a></p>
               </div>
             </div>
             <div class="contacts__address">
-              <span class="contacts__icon"></span>
+              <svg class="contacts__icon" aria-hidden="true"><use xlink:href="#pin"/></svg>
               <div>
                 <p class="contacts__label">Адрес</p>
                 <p class="contacts__text">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>
@@ -33,7 +35,7 @@
             </div>
           </div>
           <div class="contacts__right-block">
-            <span class="contacts__icon"></span>
+            <svg class="contacts__icon" aria-hidden="true"><use xlink:href="#at"/></svg>
             <div>
               <p class="contacts__label">Поддержка клиентов</p>
               <p class="contacts__text"><a href="mailto:support@digift.ru">Support@digift.ru</a></p>
@@ -45,257 +47,12 @@
           </div>
         </div>
       </section>
+      <div class="js-page-section last">
+        //= template/request.html
+        //= template/footer.html
+      </div>
     </div>
     //= template/scripts.html
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4"></script>
-    <script>
-      //карта в контактах
-      var xs = false;
-      var sm = false;
-      var md = false;
-      var lg = false;
-      var xl = false;
-      var xxl = false;
-
-      if($(window).width() > 990 && $(window).width() < 1200){
-        xs = true;
-      }
-
-      if($(window).width() > 1199 && $(window).width() < 1366){
-        sm = true;
-      }
-
-      if($(window).width() > 1365 && $(window).width() < 1440){
-        md = true;
-      }
-
-      if($(window).width() > 1439 && $(window).width() < 1600){
-        lg = true;
-      }
-
-      if($(window).width() > 1599 && $(window).width() < 1800){
-        xl = true;
-      }
-
-      if($(window).width() > 1900){
-        xxl = true;
-      }
-
-      function initContactsMap() {
-        if(xs) {
-          var mapCenter = { lat: 59.990294, lng: 30.324000 };
-        }
-
-        if(sm) {
-          var mapCenter = { lat: 59.990294, lng: 30.325300 };
-        }
-
-        if(md) {
-          var mapCenter = { lat: 59.990294, lng: 30.326200 };
-        }
-
-        if(lg) {
-          var mapCenter = { lat: 59.990294, lng: 30.327000 };
-        }
-
-        if(xl) {
-          var mapCenter = { lat: 59.990294, lng: 30.327700 };
-        }
-
-        if(xxl) {
-          var mapCenter = { lat: 59.990294, lng: 30.329500 };
-        }
-
-        var myLatLng = { lat: 59.990094, lng: 30.318777 };
-
-        var stylesArray = [
-          {
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#f5f5f5"
-              }
-            ]
-          },
-          {
-            "elementType": "labels.icon",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#616161"
-              }
-            ]
-          },
-          {
-            "elementType": "labels.text.stroke",
-            "stylers": [
-              {
-                "color": "#f5f5f5"
-              }
-            ]
-          },
-          {
-            "featureType": "administrative.land_parcel",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#bdbdbd"
-              }
-            ]
-          },
-          {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#eeeeee"
-              }
-            ]
-          },
-          {
-            "featureType": "poi",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#757575"
-              }
-            ]
-          },
-          {
-            "featureType": "poi.park",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#e5e5e5"
-              }
-            ]
-          },
-          {
-            "featureType": "poi.park",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#9e9e9e"
-              }
-            ]
-          },
-          {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#ffffff"
-              }
-            ]
-          },
-          {
-            "featureType": "road.arterial",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#757575"
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#dadada"
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#616161"
-              }
-            ]
-          },
-          {
-            "featureType": "road.local",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#9e9e9e"
-              }
-            ]
-          },
-          {
-            "featureType": "transit.line",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#e5e5e5"
-              }
-            ]
-          },
-          {
-            "featureType": "transit.station",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#eeeeee"
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#c9c9c9"
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#9e9e9e"
-              }
-            ]
-          }
-        ];
-
-        var map = new google.maps.Map(document.getElementById("contacts-map"), {
-          zoom: 16,
-          center: mapCenter,
-          scrollwheel: true,
-          zoomControl: true,
-          scaleControl: true,
-          mapTypeControl: false,
-          streetViewControl: false,
-          styles: stylesArray
-        });
-
-        var image = {
-          url: "images/icons/map-pin.png",
-          size: new google.maps.Size(43, 51),
-          origin: new google.maps.Point(0, 0),
-          anchor: new google.maps.Point(21, 51)
-        };
-
-        var beachMarker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          icon: image
-        });
-      }
-      if ($("#contacts-map").length) {
-        initContactsMap();
-      }
-    </script>
+    //= template/map.html
   </body>
 </html>
