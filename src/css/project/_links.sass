@@ -43,28 +43,26 @@
       visibility: visible
 
   &__title-block
-    @media(min-width: 1440px)
+    @media(min-width: 1200px)
       align-items: center
       display: flex
       justify-content: space-between
 
   &__title
+    display: block
     font-size: 20px
+    min-height: 60px
+
+    @media(min-width: 1200px)
+      min-height: 30px
 
   &__icon
-    border-radius: 4px
-    fill: #00655d
     display: block
-    height: 48px
     margin-bottom: 26px
-    width: 48px
 
-    @media(min-width: 1440px)
+    @media(min-width: 1200px)
       margin-bottom: 0
       order: 2
-
-    &--white
-      fill: #fff
 
   &__text-block
     max-height: 0
