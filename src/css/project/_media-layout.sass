@@ -1,0 +1,70 @@
+.media-layout
+  &__left
+    display: flex
+    flex-flow: column
+    justify-content: center
+    height: 100%
+    left: 0
+    padding-left: 6.25%
+    padding-right: 6.25%
+    position: fixed
+    top: 0
+    width: 37.5%
+
+    h1
+      @media(min-height: 900px)
+        margin-bottom: 88px
+
+  &__right
+    padding-left: 37.5%
+    padding-top: 90px
+    padding-bottom: 90px
+
+    @media(min-width: 1440px)
+      padding-right: 6.25%
+
+.media-detail
+  padding-top: 48px
+  padding-bottom: 72px
+
+  &__arrows
+    display: flex
+    height: 0
+    justify-content: space-between
+    left: 50%
+    position: fixed
+    padding-left: 30px
+    padding-right: 30px
+    top: 50%
+    transform: translate(-50%, -50%)
+    max-width: 1232px
+    width: 100%
+
+  &__arrow
+    align-items: center
+    background-color: #38393d
+    border-radius: 6px
+    display: flex
+    height: 48px
+    justify-content: center
+    opacity: 0.24
+    transition: opacity 0.3s
+    text-align: center
+    width: 48px
+    z-index: 1
+
+    &:hover
+      opacity: 0.6
+
+    &--prev
+      left: 30px
+
+    &--next
+      left: auto
+      right: 30px
+
+  &__arrow-icon
+    fill: #fff
+    height: 24px
+    vertical-align: middle
+    width: 24px

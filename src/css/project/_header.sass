@@ -1,11 +1,16 @@
 .header
-  left: 0
-  opacity: 1
-  position: fixed
-  top: 0
-  transition: z-index 0.5s, opacity 0.3s
-  width: 100%
+  position: relative
   z-index: 2
+
+  &--fixed
+    left: 0
+    opacity: 1
+    position: fixed
+    top: 0
+    transition: z-index 0.5s, opacity 0.3s
+    width: 100%
+    z-index: 2
+
 
   &.visibility-hidden
     opacity: 0
