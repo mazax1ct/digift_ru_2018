@@ -3,6 +3,21 @@ function isTouchDevice() {
     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 }
 
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 0) {
+      $('.js-to-top').addClass('is-active');
+  } else {
+      $('.js-to-top').removeClass('is-active');
+  }
+});
+
+$('.js-to-top').click(function () {
+  $('body, html').animate({
+      scrollTop: 0
+  }, 300);
+  return false;
+});
+
 $(document).ready(function() {
   //убираем пометку о том что js выключен
   $('body').removeClass('no-js');
@@ -32,6 +47,11 @@ $(document).ready(function() {
           destination: destination,
           direction: direction
         };
+        if(params.destination.index > 0) {
+          $('.to-top').addClass('is-active');
+        } else {
+          $('.to-top').removeClass('is-active');
+        }
         if(params.destination.item.classList.contains('dark')) {
           $('.main-menu').addClass('white');
         } else {
@@ -201,4 +221,8 @@ $(document).ready(function() {
       }
     });
   });
+
+  if ($('.js-sticky-block').length) {
+    $(".js-sticky-block").stick_in_parent();
+  }
 });

@@ -11,24 +11,26 @@
 
     //= template/style.html
   </head>
-  <body class="no-js media-page media-page--preset_4">
+  <body id="top" class="no-js media-page media-page--preset_4">
     //= template/sprite.html
     //= template/header-blog.html
     <div class="media-layout">
       <div class="media-layout__left">
-        <h1>Блог</h1>
-        <ul class="left-menu">
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Развитие</a></li>
-          <li class="left-menu__item"><a class="left-menu__link is-active" href="#">Партнеры</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Рынок</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Исследования</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Другое</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Развитие</a></li>
-          <li class="left-menu__item"><a class="left-menu__link is-active" href="#">Партнеры</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Рынок</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Исследования</a></li>
-          <li class="left-menu__item"><a class="left-menu__link" href="#">Другое</a></li>
-        </ul>
+        <div class="js-sticky-block">
+          <h1>Блог</h1>
+          <ul class="left-menu">
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Развитие</a></li>
+            <li class="left-menu__item"><a class="left-menu__link is-active" href="#">Партнеры</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Рынок</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Исследования</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Другое</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Пункт номер 6</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Пункт номер 7</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Пункт номер 8</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Пункт номер 9</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Пункт номер 10</a></li>
+          </ul>
+        </div>
       </div>
       <div class="media-layout__right">
         <div class="articles-list">
@@ -107,6 +109,7 @@
         </div>
       </div>
     </div>
+    <a class="js-to-top to-top to-top--for_simplepage" href="#top" title="Наверх"><svg class="to-top__icon" aria-hidden="true"><use xlink:href="#arrow-top"/></svg></a>
     //= template/scripts.html
   </body>
 </html>

@@ -1,0 +1,46 @@
+.to-top
+  align-items: center
+  background-color: #38393d
+  border: none
+  border-radius: 6px
+  bottom: 45px
+  cursor: pointer
+  display: flex
+  height: 48px
+  justify-content: center
+  left: auto
+  outline: none
+  opacity: 0.4
+  padding: 0
+  right: 45px
+  transition: all 0.3s
+  position: fixed
+  top: auto
+  width: 48px
+  z-index: 1
+
+  &--for_fullpage
+    z-index: -1
+
+    &.is-active
+      z-index: 1
+
+  &--for_simplepage
+    opacity: 0
+    visibility: hidden
+
+    &.is-active
+      opacity: 0.4
+      visibility: visible
+
+  &:hover,
+  &:focus
+    color: transparent
+    outline: none
+    opacity: 0.6
+
+  &__icon
+    fill: #fff
+    height: 24px
+    vertical-align: middle
+    width: 24px
