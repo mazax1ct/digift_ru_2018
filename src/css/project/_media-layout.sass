@@ -4,28 +4,27 @@
   padding-bottom: 90px
 
   &__left
-    //display: flex
-    //flex-flow: column
-    //justify-content: center
-    //height: 100%
-    //left: 0
     padding-left: 6.25%
     padding-right: 6.25%
-    //padding-top: 90px
-    //padding-bottom: 90px
-    //padding-top: 80px
-    //position: fixed
-    //top: 0
     width: 37.5%
 
     h1
+      padding-top: 0
+      transition: padding-top 0.5s
+
       @media(min-height: 900px)
         margin-bottom: 88px
 
-  &__right
-    //padding-left: 37.5%
-    //padding-top: 90px
+  .is_stuck
 
+    h1
+      padding-top: 64px
+
+      @media(min-width: 1366px)
+        padding-top: 90px
+
+
+  &__right
     width: 62.5%
 
     @media(min-width: 1440px)

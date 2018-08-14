@@ -16,7 +16,7 @@
   justify-content: flex-end
   height: 60%
   min-height: 224px
-  padding: 43px 48px
+  padding: 43px 48px 16px
   text-decoration: none
   transition: height 0.5s
   width: 33.33%
@@ -39,10 +39,11 @@
     .link__text-block
       max-height: 280px
       opacity: 1
-      padding-top: 27px
       visibility: visible
 
   &__title-block
+    padding-bottom: 27px
+
     @media(min-width: 1200px)
       align-items: center
       display: flex
@@ -68,11 +69,13 @@
     max-height: 0
     opacity: 0
     overflow: hidden
-    padding-top: 0
-    transition: max-height 0.3s, opacity 0.3s, padding-top 0.3s, visibility 0.3s
+    transition: max-height 0.5s, opacity 0.5s, visibility 0.5s
     visibility: hidden
 
   &__text
     display: block
     opacity: 0.8
     padding-bottom: 30px
+
+  .more-link
+    margin-bottom: 27px

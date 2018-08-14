@@ -3,6 +3,7 @@ function isTouchDevice() {
     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 }
 
+//активация кнопки "наверх"
 $(window).scroll(function () {
   if ($(this).scrollTop() > 0) {
       $('.js-to-top').addClass('is-active');
@@ -11,6 +12,7 @@ $(window).scroll(function () {
   }
 });
 
+//скролл наверх при нажитии кнопки "наверх"
 $('.js-to-top').click(function () {
   $('body, html').animate({
       scrollTop: 0
@@ -225,4 +227,11 @@ $(document).ready(function() {
   if ($('.js-sticky-block').length) {
     $(".js-sticky-block").stick_in_parent();
   }
+
+  //скрываем кнопку "наверх" при наведении на последнюю карточку
+  $('.cards .card:nth-child(6)').hover(function() {
+    $('body').addClass('last-card-hover');
+  }, function() {
+    $('body').removeClass('last-card-hover');
+  });
 });

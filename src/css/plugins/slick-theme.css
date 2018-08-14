@@ -67,16 +67,10 @@
   bottom: 55px;
   display: flex;
   flex-wrap: wrap;
-  left: 45px;
+  left: 16.5%;
   margin-bottom: 0;
   position: absolute;
   top: auto;
-}
-
-@media(min-width: 1440px) {
-  .slick-dots {
-    left: 90px;
-  }
 }
 
 .slick-dots li {
