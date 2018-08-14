@@ -5,6 +5,10 @@
   margin-right: auto
   width: 810px
 
+  &--case
+    .article-detail__text
+      padding-bottom: 42px
+
   &__text
     padding: 75px 108px 86px
 
@@ -36,3 +40,28 @@
 
     &:last-child
       margin-bottom: 0
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 64px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__col
+    margin-bottom: 23px
+    width: 50%
+
+    &:nth-child(even)
+      padding-left: 42px
+
+  &__button-block
+    border-top: 1px solid #e5e5e5
+    margin-left: -36px
+    margin-right: -36px
+    padding-top: 42px
+    text-align: center
+
+  &__button
+    min-width: 250px
