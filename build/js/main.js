@@ -196,10 +196,10 @@ $(document).ready(function() {
       //появляется дропдаун
       $(this).find('.main-menu__dropdown').fadeIn(200);
     }, function() {
-      //исчезает дропдаун
-      $(this).find('.main-menu__dropdown').stop(true, true).fadeOut(200);
       //класс для обраной анаимации псевдоэлемента
       $('.header').addClass('fade-out');
+      //исчезает дропдаун
+      $(this).find('.main-menu__dropdown').stop(true, true).fadeOut(200);
       //полностью убираем псевдоэлемент
       setTimeout(function() {
         $('.header').removeClass('fader').removeClass('fade-out');
