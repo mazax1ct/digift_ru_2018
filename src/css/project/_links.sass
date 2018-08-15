@@ -2,12 +2,15 @@
   align-items: flex-end
   bottom: 0
   display: flex
-  min-height: 224px
+  min-height: 168px
   left: 0
   padding-left: 6.25%
   position: absolute
   top: auto
   width: 100%
+
+  @media(min-height: 768px)
+    min-height: 224px
 
 .link
   color: #fff
@@ -15,11 +18,15 @@
   flex-flow: column
   justify-content: flex-end
   height: 60%
-  min-height: 224px
-  padding: 43px 48px 16px
+  min-height: 168px
+  padding: 34px 36px 0
   text-decoration: none
   transition: height 0.5s
   width: 33.33%
+
+  @media(min-height: 768px)
+    min-height: 224px
+    padding: 43px 48px 16px
 
   &--dark_text
     color: #002c29
@@ -59,7 +66,10 @@
 
   &__icon
     display: block
-    margin-bottom: 26px
+    margin-bottom: 23px
+
+    @media(min-height: 768px)
+      margin-bottom: 26px
 
     @media(min-width: 1200px)
       margin-bottom: 0
