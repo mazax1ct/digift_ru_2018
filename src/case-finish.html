@@ -11,7 +11,7 @@
 
     //= template/style.html
   </head>
-  <body id="top" class="no-js media-page media-page--preset_1">
+  <body id="top" class="no-js media-page media-page--preset_1 overflow">
     //= template/sprite.html
     //= template/header-blog.html
     <div class="media-detail">
@@ -37,37 +37,14 @@
           </div>
         </div>
       </div>
-      <div class="case-form">
-        <div class="case-form__form-block">
-            <button  class="js-case-form-closer case-form__close" type="button" title="Закрыть"><svg class="case-form__close-icon" aria-hidden="true"><use xlink:href="#close"/></svg></button>
-            <p class="case-form__title">Загрузить кейс</p>
-            <form class="case-form__form" action="/" method="get">
-              <label class="label" for="name">
-                <input id="name" class="js-input input" name="name" type="text" value="">
-                <span class="label__placeholder">Имя</span>
-              </label>
-              <label class="label" for="last_name">
-                <input id="last_name" class="js-input input" name="last_name" type="text" value="">
-                <span class="label__placeholder">Фамилия</span>
-              </label>
-              <label class="label" for="company">
-                <input id="company" class="js-input input" name="company" type="text" value="">
-                <span class="label__placeholder">Компания</span>
-              </label>
-              <label class="label" for="place">
-                <input id="place" class="js-input input" name="place" type="text" value="">
-                <span class="label__placeholder">Должность</span>
-              </label>
-              <label class="label" for="email">
-                <input class="js-input input" name="email" type="email" value="">
-                <span class="label__placeholder">Email</span>
-              </label>
-              <label class="label" for="comment">
-                <input id="comment" class="js-input input" name="comment" type="text" value="">
-                <span class="label__placeholder">Комментарий</span>
-              </label>
-              <button class="case-form__button button" type="submit">Скачать кейс</button>
-            </form>
+      <div class="case-form is-open">
+        <div class="case-form__form-block case-form__form-block--finish  is-open">
+          <div class="congratulation">
+            <img class="congratulation__image" width="91" height="76" src="images/decor/congratulation.svg" alt="">
+            <p class="congratulation__title">Поздравляем!</p>
+            <p>Ваша заявка успешно отправлена. В ближайшее время с вами свяжется наш менеджер.</p>
+            <button class="js-case-form-closer congratulation__button button" type="submit">Окей</button>
+          </div>
         </div>
       </div>
     </div>

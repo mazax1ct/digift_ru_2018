@@ -1,0 +1,109 @@
+.case-form
+  background-color: rgba(0,0,0,0.2)
+  display: none
+  height: 100vh
+  left: 0
+  overflow: hidden
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+
+  &.is-open
+    display: block
+
+  &__form-block
+    background-color: #f1f2f3
+    display: flex
+    flex-flow: column
+    height: 100vh
+    left: auto
+    overflow-y: auto
+    padding: 36px 60px 0
+    position: absolute
+    right: -450px
+    top: 0
+    transition: right 0.3s
+    width: 450px
+    z-index: 3
+
+    @media(min-height: 768px)
+      padding: 72px 60px 0
+
+    &--finish
+      justify-content: center
+      padding-top: 0
+
+    &.is-open
+      right: 0
+
+  &__form
+    display: flex
+    flex-flow: column
+    flex-grow: 1
+    padding-bottom: 36px
+    position: relative
+
+    @media(min-height: 768px)
+      padding-bottom: 72px
+
+  &__close
+    align-items: center
+    background-color: #38393d
+    border: none
+    border-radius: 6px
+    cursor: pointer
+    display: flex
+    height: 48px
+    justify-content: center
+    left: auto
+    outline: none
+    opacity: 0.4
+    padding: 0
+    right: 6px
+    transition: all 0.3s
+    position: fixed
+    top: 6px
+    width: 48px
+    z-index: 2
+
+  &__close-icon
+    fill: #fff
+    height: 24px
+    vertical-align: middle
+    width: 24px
+
+  &__title
+    font-size: 30px
+    line-height: 30px
+    margin-bottom: 15px
+
+    @media(min-height: 700px)
+      margin-bottom: 35px
+
+    @media(min-height: 768px)
+      margin-bottom: 70px
+
+  &__button
+    display: block
+    margin-top: 10px
+    padding-top: 24px
+    padding-bottom: 40px
+    width: 100%
+
+    @media(min-height: 700px)
+      margin-top: auto
+
+.congratulation
+  &__image
+    margin-bottom: 42px
+
+  &__title
+    font-size: 30px
+    line-height: 30px
+    margin-bottom: 32px
+
+  &__button
+    display: block
+    margin-top: 39px
+    width: 100%

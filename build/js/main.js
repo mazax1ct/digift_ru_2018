@@ -234,4 +234,24 @@ $(document).ready(function() {
   }, function() {
     $('body').removeClass('last-card-hover');
   });
+
+  //открытие формы скачивания кейса
+  $('.js-case-form-opener').click(function() {
+    $('body').addClass('overflow');
+    $('.case-form').addClass('is-open');
+    setTimeout(function() {
+      $('.case-form__form-block').addClass('is-open');
+    }, 300);
+    return false;
+  });
+
+  //закрытие формы скачивания кейса
+  $('.js-case-form-closer').click(function() {
+    $('.case-form__form-block').removeClass('is-open');
+    setTimeout(function() {
+      $('.case-form').removeClass('is-open');
+      $('body').removeClass('overflow');
+    }, 300);
+    return false;
+  });
 });

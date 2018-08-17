@@ -23,10 +23,7 @@
     flex-flow: column
     flex-grow: 1
     justify-content: flex-start
-    padding: 8%
-
-    @media(min-width: 1366px)
-      padding: 10%
+    padding: 42px 36px
 
   &__tag
     color: #9a9a9a
@@ -40,11 +37,7 @@
     display: block
     margin-bottom: 18px
     max-height: 120px
-    //max-height: 150px
     overflow: hidden
-
-    //@media(min-height: 768px)
-      max-height: 180px
 
   &__more
     background-image: url('../images/icons/more-link.svg')
@@ -74,3 +67,9 @@
 
   .article
     height: 100%
+
+  .article__text
+    padding: 5.5% 8%
+
+    @media(min-height: 700px)
+      padding: 10%
