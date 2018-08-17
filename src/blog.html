@@ -11,7 +11,7 @@
 
     //= template/style.html
   </head>
-  <body id="top" class="no-js media-page media-page--preset_4">
+  <body id="top" class="no-js media-page media-page preset_1">
     //= template/sprite.html
     //= template/header-blog.html
     <div class="media-layout">
@@ -20,7 +20,7 @@
           <h1>Блог</h1>
           <ul class="left-menu">
             <li class="left-menu__item"><a class="left-menu__link" href="#">Развитие</a></li>
-            <li class="left-menu__item"><a class="left-menu__link is-active" href="#">Партнеры</a></li>
+            <li class="left-menu__item"><a class="left-menu__link" href="#">Партнеры</a></li>
             <li class="left-menu__item"><a class="left-menu__link" href="#">Рынок</a></li>
             <li class="left-menu__item"><a class="left-menu__link" href="#">Исследования</a></li>
             <li class="left-menu__item"><a class="left-menu__link" href="#">Другое</a></li>
@@ -111,5 +111,21 @@
     </div>
     <a class="js-to-top to-top to-top--for_simplepage" href="#top" title="Наверх"><svg class="to-top__icon" aria-hidden="true"><use xlink:href="#arrow-top"/></svg></a>
     //= template/scripts.html
+    <script>
+    // удалить это!!!
+      (function($) {
+        $.fn.removeClassWild = function(mask) {
+          return this.removeClass(function(index, cls) {
+            var re = mask.replace(/\*/g, '\\S+');
+            return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+          });
+        };
+      })(jQuery);
+      $('.left-menu__link').hover(function() {
+        $('body').removeClassWild('preset_*');
+        var parent_index = $(this).parent().index() + 1;
+        $('body').addClass('preset_' + parent_index);
+      });
+    </script>
   </body>
 </html>
