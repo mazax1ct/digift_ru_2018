@@ -42,7 +42,7 @@ $(document).ready(function() {
       },
       onLeave: function(origin, destination, direction) {
         $('.js-root .main-menu__link').removeClass('drop-open');
-        $('.header').removeClass('fader').stop(true, true);
+        $('.header').removeClass('fader').stop(true, true).addClass('move');
         $('.main-menu__dropdown').fadeOut(200).stop(true, true);
         var params = {
           origin: origin,
@@ -71,6 +71,7 @@ $(document).ready(function() {
           destination: destination,
           direction: direction
         };
+        $('.header').removeClass('move');
         if(params.destination.item.classList.contains('last')) {
           $('.header').addClass('hidden');
         }
@@ -254,4 +255,12 @@ $(document).ready(function() {
     }, 300);
     return false;
   });
+
+  //замена ссылок в контактах
+  if($('.js-change-link').length){
+    $('.js-change-link').each(function( index ) {
+      var replaceText = $(this).attr('data-link');
+      $(this).html(replaceText);
+    });
+  }
 });

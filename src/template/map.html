@@ -1,4 +1,4 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4&callback=initContactsMap" async defer></script>
 <script>
   //карта в контактах
   var xs = false;
@@ -140,12 +140,14 @@
       }
     ];
 
+    var popupContent = '<p class="content">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>';
+
     var map = new google.maps.Map(document.getElementById("contacts-map"), {
       zoom: 16,
       center: mapCenter,
-      scrollwheel: true,
-      zoomControl: true,
-      scaleControl: true,
+      scrollwheel: false,
+      zoomControl: false,
+      scaleControl: false,
       mapTypeControl: false,
       streetViewControl: false,
       styles: stylesArray
@@ -158,13 +160,18 @@
       anchor: new google.maps.Point(21, 51)
     };
 
-    var beachMarker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
       icon: image
     });
-  }
-  if ($("#contacts-map").length) {
-    initContactsMap();
+
+    infowindow = new google.maps.InfoWindow({
+      content: popupContent
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
   }
 </script>

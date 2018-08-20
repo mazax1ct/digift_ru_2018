@@ -121,7 +121,7 @@
           });
         };
       })(jQuery);
-      $('.left-menu__link').hover(function() {
+      $('.left-menu__link').click(function() {
         $('body').removeClassWild('preset_*');
         var parent_index = $(this).parent().index() + 1;
         $('body').addClass('preset_' + parent_index);

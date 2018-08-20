@@ -14,38 +14,53 @@
   <body class="no-js">
     //= template/sprite.html
     //= template/header.html
-    <section class="section">
-      <div id="contacts-map" class="contacts-map"></div>
-      <div class="contacts">
-        <div class="contacts__left-block">
-          <div class="contacts__phone">
-            <svg class="contacts__icon icon icon--dark_green" aria-hidden="true"><use xlink:href="#phone"/></svg>
-            <div>
-              <p class="contacts__label">Телефон</p>
-              <p class="contacts__text"><a href="tel:88003330778">8 800 333 0778</a></p>
+    <div id="fullpage">
+      <section class="js-page-section section">
+        <div id="contacts-map" class="contacts-map"></div>
+        <div class="contacts">
+          <div class="contacts__left-block">
+            <div class="contacts__phone">
+              <svg class="contacts__icon icon icon--dark_green" aria-hidden="true"><use xlink:href="#phone"/></svg>
+              <div>
+                <p class="contacts__label">Телефон</p>
+                <p class="contacts__text"><a href="tel:88003330778">8 800 333 0778</a></p>
+              </div>
+            </div>
+            <div class="contacts__address">
+              <svg class="contacts__icon icon icon--white" aria-hidden="true"><use xlink:href="#pin"/></svg>
+              <div>
+                <p class="contacts__label">Адрес</p>
+                <p class="contacts__text">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>
+              </div>
             </div>
           </div>
-          <div class="contacts__address">
-            <svg class="contacts__icon icon icon--white" aria-hidden="true"><use xlink:href="#pin"/></svg>
+          <div class="contacts__right-block">
+            <svg class="contacts__icon icon icon--grey" aria-hidden="true"><use xlink:href="#at"/></svg>
             <div>
-              <p class="contacts__label">Адрес</p>
-              <p class="contacts__text">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>
+              <p class="contacts__label">Поддержка клиентов</p>
+              <p class="contacts__text">
+                <!--<a href="mailto:support@digift.ru">Support@digift.ru</a>-->
+                <span class="js-change-link" data-link="<a href='mailto:support@digift.ru'>Support@digift.ru</a>"><img width="177" height="30" src="images/content/support_email.jpg" alt="Support@digift.ru"></span>
+              </p>
+              <p class="contacts__label">Сотрудничество</p>
+              <p class="contacts__text">
+                <!--<a href="mailto:partner@digift.ru">Partner@digift.ru</a>-->
+                <span class="js-change-link" data-link="<a href='mailto:partner@digift.ru'>Partner@digift.ru</a>"><img width="169" height="30" src="images/content/partners_email.jpg" alt="Partner@digift.ru"></span>
+              </p>
+              <p class="contacts__label">Для СМИ</p>
+              <p class="contacts__text">
+                <!--<a href="mailto:pr@digift.ru">Pr@digift.ru</a>-->
+                <span class="js-change-link" data-link="<a href='mailto:pr@digift.ru'>Pr@digift.ru</a>"><img width="116" height="30" src="images/content/pr_email.jpg" alt="Pr@digift.ru"></span>
+              </p>
             </div>
           </div>
         </div>
-        <div class="contacts__right-block">
-          <svg class="contacts__icon icon icon--grey" aria-hidden="true"><use xlink:href="#at"/></svg>
-          <div>
-            <p class="contacts__label">Поддержка клиентов</p>
-            <p class="contacts__text"><a href="mailto:support@digift.ru">Support@digift.ru</a></p>
-            <p class="contacts__label">Сотрудничество</p>
-            <p class="contacts__text"><a href="mailto:partner@digift.ru">Partner@digift.ru</a></p>
-            <p class="contacts__label">Для СМИ</p>
-            <p class="contacts__text"><a href="mailto:pr@digift.ru">Pr@digift.ru</a></p>
-          </div>
-        </div>
+      </section>
+      <div class="js-page-section last">
+        //= template/request.html
+        //= template/footer.html
       </div>
-    </section>
+    </div>
     //= template/scripts.html
     //= template/map.html
   </body>
