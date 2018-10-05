@@ -11,6 +11,10 @@ html.fp-enabled,
   box-sizing: border-box;
 }
 
+.fp-section.last .fp-tableCell {
+  vertical-align: bottom;
+}
+
 .fp-slide {
   float: left;
 }
