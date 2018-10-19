@@ -87,14 +87,24 @@ $(document).ready(function() {
 
   //слайдер карточек партнеров
   if ($('.js-partners-slider').length) {
-    $('.js-partners-slider').slick({
-      infinite: false,
-      edgeFriction: 0,
-      prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
-      dots: true,
-      appendDots: $('#partners-slider-dots')
-    });
+    if($('.js-partners-slider .cards-slider__slide').length > 1) {
+      $('.js-partners-slider').slick({
+        infinite: false,
+        edgeFriction: 0,
+        prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
+        dots: true,
+        appendDots: $('#partners-slider-dots')
+      });
+    } else {
+      $('.js-partners-slider').slick({
+        infinite: false,
+        edgeFriction: 0,
+        prevArrow: '<button type="button" class="slick-prev" title="Назад"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-left"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next" title="Вперед"><svg class="slick-prev__icon" aria-hidden="true"><use xlink:href="#arrow-right"/></svg></button>',
+        dots: false
+      });
+    }
   }
 
   //убираем эвенты при перелистывании
