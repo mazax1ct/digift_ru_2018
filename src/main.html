@@ -10,8 +10,13 @@
     //= template/favicon.html
 
     //= template/style.html
+
   </head>
-  <body class="no-js">
+  <body id="body" class="no-js">
+    <script>
+      var elem = document.getElementById('body');
+      elem.style.overflow = 'hidden';
+    </script>
     //= template/sprite.html
     //= template/header.html
     <div id="fullpage">
