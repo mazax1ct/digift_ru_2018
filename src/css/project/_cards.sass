@@ -35,13 +35,15 @@
     left: 0
     opacity: 1
     position: absolute
-    padding: 24px
+    padding-left: 24px
+    padding-right: 24px
     transition: opacity 0.3s
     top: 0
     width: 100%
 
     @media(min-width: 1440px)
-      padding: 48px
+      padding-left: 48px
+      padding-right: 48px
 
     &--text_white
       color: #fff
@@ -101,11 +103,13 @@
 
   &__back-inner
     min-height: 100%
-    padding: 24px
+    padding-left: 24px
+    padding-right: 24px
     width: 100%
 
     @media(min-width: 1440px)
-      padding: 48px
+      padding-left: 48px
+      padding-right: 48px
 
     &--align_center
       align-items: center
@@ -121,9 +125,19 @@
       display: flex
       flex-flow: column
       justify-content: space-between
+      padding: 24px
+
+      @media(min-width: 1440px)
+        padding: 48px
+
+      img
+        max-width: 75%
 
     &--white_text
       color: #fff
+
+      .more-link
+        color: #fff
 
   &__back-title
     margin-top: 24px
